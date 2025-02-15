@@ -12,14 +12,27 @@ int main(int argc, char *argv[]) {
 
     a= 5.3;
     b= 1.1;
-    c= 0.0;
+    c= 6.0;
 
     d = pow(b,2) - 4*a*c;
-    x1 = (-b + sqrt(d))/(2*a);
-    x2 = (-b - sqrt(d))/(2*a);
+    printf("d = ", d);
 
-    printf("x1 = ", x1);
-    printf("x2 = ", x2);
+    if (d < 0) printf("korney net");
+    if (d > 0) {
+        
+        x1 = (-b + sqrt(d))/(2*a);
+        x2 = (-b - sqrt(d))/(2*a);
+
+        printf("x1 = %if\n", x1);
+        printf("x2 = %if\n", x2);
+
+    }
+
+    if (d == 0) {
+        x1 = (-b + sqrt(d))/(2*a);
+        printf("only one root x = %if\n", x1);
+    }
+
 
     return 0;
 
