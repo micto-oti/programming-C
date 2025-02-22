@@ -1,29 +1,27 @@
-﻿#include <stdio.h>
+﻿unsigned char nat[10000000];
+#include <stdio.h>
 
-unsigned char nat[10000000 / 8];
+#define setbit(b,k) ((b)=(b)|0x80>>(k))
+#define clrbit(b,k) ((b)=(b)&(~(0x80>>(k))))
+#define TestBit(b,k) (((b)&0x80>>(k))?1:0)
+#define DEBUG
+//#undef DEBUG
 
-unsigned char selbit(unsigned char b, int k) {
-	return b | (0x80) >> k;
-}
+int main(int argc, char **argv) {
 
-unsigned char clrbit(unsigned char b, int k) {
-	return ~(0x80 >> k) | b;
-}
-
-
-int testbit(unsigned char b, int k) {
-	return 0x80 >> 1 & b ? 1 : 0;
-}
-
-int main(int argc, char* argv[]) {
-		
 	long N, Prime;
+	printf("input N:\n");
 	scanf_s("%ld", &N);
 
-	for (int i = 0; i <= N / 8; i++) nat[i] = -1;
-
-
-	
+	for (int i = 0; i < N; i++) {
+		nat[i] = 0xff;
+	}
+//#ifdef Debug
+	nat[0] = 0;
+	setbit(nat[0], 2);
+	setbit(nat[0], 6);
+	printf("%x\n", nat[0]);
+//#endif DEBUG
 
 	return 0;
 }
