@@ -11,15 +11,24 @@
 int main(int argc, char argv[]) 
 {
 	char u_str[80];
-
+	
 	printf("Input str:");
 	scanf_s("%s", u_str, (unsigned)_countof(u_str));
 
-	for (int i; i < 80; i++) {
-		if (strchr(u_str, "a") == 0) {
-			u_str[i] = "A";
+	size_t lenght = strlen(u_str);
+
+	for (size_t i = 0; i < lenght; i++) {
+		if (u_str[i] == 'a') 
+		{
+			u_str[i] = 'A';
+		} 
+		if (u_str[i] == 'b')
+		{
+			u_str[i] = 'B';
 		}
 	}
+
+	printf("Modified str: %s", u_str);
 
 
 

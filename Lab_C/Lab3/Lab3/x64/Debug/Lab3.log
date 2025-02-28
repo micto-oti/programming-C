@@ -1,0 +1,6 @@
+﻿  Lab3.cpp
+E:\projects\github\programming-C\Lab_C\Lab3\Lab3\Lab3.cpp(4,9): warning C4005: _countof: изменение макроопределения
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\stdlib.h(27,13):
+      см. предыдущее определение "_countof"
+  
+  Lab3.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab3\x64\Debug\Lab3.exe
