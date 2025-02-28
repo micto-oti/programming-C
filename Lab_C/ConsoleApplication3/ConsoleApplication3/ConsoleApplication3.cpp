@@ -1,6 +1,7 @@
 ﻿#include <stdio.h>
 #include <math.h>
 #include <string.h>
+#define _countof(arr) (sizeof(arr) / sizeof(arr[0]))
 
 /*
     Объявить вещественные переменные a, b и с и задать их значения. Предполагая, что a, b, c есть коэффициенты квадратного уравнения вывести на консоль значения их корней х1, х2. Следует подобрать такие значения коэффициентов, при которых корни будут существовать.
@@ -49,7 +50,7 @@ int main(int argc, char* argv[]) {
         
 
         printf("Continue?\n");
-        scanf_s("%s", &choose);
+        scanf_s("%s", choose, (unsigned)_countof(choose));
 
         if (strcmp(choose, "no") == 0) {
             break;

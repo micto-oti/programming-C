@@ -1,11 +1,3 @@
 ﻿E:\progs\Microsoft Visual Studio\community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: промежуточный каталог (x64\Debug\) содержит файлы, которые используются совместно с другим проектом (ConsoleApplication3.vcxproj).  Это может привести к ошибкам очистки и перестроения.
   ConsoleApplication3.cpp
-E:\projects\github\programming-C\Lab_C\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.cpp(52,17): warning C4473: "scanf_s": передано недостаточно аргументов для строки формата
-      E:\projects\github\programming-C\Lab_C\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.cpp(52,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 2, но было предоставлено 1
-      E:\projects\github\programming-C\Lab_C\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.cpp(52,17):
-      отсутствующий вариативный аргумент "2" требуется для строки форматирования "%s"
-      E:\projects\github\programming-C\Lab_C\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.cpp(52,17):
-      этот аргумент используется в качестве размера буфера
-  
   ConsoleApplication3.vcxproj -> E:\projects\github\programming-C\Lab_C\ConsoleApplication3\x64\Debug\Lab1.exe
