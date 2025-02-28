@@ -2,23 +2,26 @@
 #include <stdlib.h>
 #include <math.h>
 
-
+/*
+Объявить массив данных типа double размером 3 на 3. Ввести с консоли его значения, вывести на консоль сумму его элементов, расположенных на главной диагонали и сумму элементов, расположенных на  побочной диагонали.
+Объявить массив данных типа int размером 2 на 2. Ввести с консоли его значения, вывести на консоль квадрат данной матрицы.
+*/
 
 int main(int argc, char* argv[]) {
 
     int i, j;
-    double A[3][3], sumg, sump;
+    double Array[3][3], sumg, sump;
 
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             printf("A[%d][%d]: ", i, j);
-            scanf("%lf", &A[i][j]);
+            scanf_s("%lf", &Array[i][j]);
         }
     }
 
 
-    sumg = A[0][0] + A[1][1] + A[2][2];
-    sump = A[0][2] + A[1][1] + A[2][0];
+    sumg = Array[0][0] + Array[1][1] + Array[2][2];
+    sump = Array[0][2] + Array[1][1] + Array[2][0];
 
 
     printf(" Summa sumg = %lf \n", sumg);
