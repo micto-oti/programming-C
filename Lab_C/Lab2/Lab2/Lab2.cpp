@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
             printf("B[%d][%d]: ", i, j);
-            scanf("%d", &B[i][j]);
+            scanf_s("%d", &B[i][j]);
         }
     }
     a = pow(B[0][0], 2) + (B[0][1] * B[1][0]);
