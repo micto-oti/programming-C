@@ -24,8 +24,8 @@ int main(int argc, char* argv[]) {
     sump = Array[0][2] + Array[1][1] + Array[2][0];
 
 
-    printf(" Summa sumg = %lf \n", sumg);
-    printf(" Summa sump = %lf \n", sump);
+    printf(" Sum main diag = %lf \n", sumg);
+    printf(" Sum second diag = %lf \n", sump);
 
     int B[2][2];
     int a, b, c, d;
@@ -44,7 +44,6 @@ int main(int argc, char* argv[]) {
     printf("%d ", c);
     printf("%d \n", d);
 
+
     return 0;
-
-
 }
