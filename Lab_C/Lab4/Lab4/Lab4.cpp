@@ -25,10 +25,11 @@ int trianlge(int argc, char argv[])
 	int abside = a + b;
 	int bcside = b + c;
 	int acside = a + c;
+	bool test = false;
 
 	// проверка на корректность данных
-	while (1);
-		if (a > bcside){
+	while (test != true) {
+		if (a > bcside) {
 			printf("a > b + c, you should change sides\n");
 			printf("Input trianlnge side a: \n");
 			scanf("\lf", &a);
@@ -36,7 +37,8 @@ int trianlge(int argc, char argv[])
 			scanf("\lf", &b);
 			printf("Input trianlnge side c: \n");
 			scanf("\lf", &c);
-	}
+		}
+		else test = true;
 
 		if (b > acside) {
 			printf("b > a + c, you should change sides\n");
@@ -46,7 +48,9 @@ int trianlge(int argc, char argv[])
 			scanf("\lf", &b);
 			printf("Input trianlnge side c: \n");
 			scanf("\lf", &c);
-	}
+		}
+		else test = true;
+
 		if (c > abside) {
 			printf("c > a + b, you should change sides\n");
 			printf("Input trianlnge side a: \n");
@@ -55,14 +59,16 @@ int trianlge(int argc, char argv[])
 			scanf("\lf", &b);
 			printf("Input trianlnge side c: \n");
 			scanf("\lf", &c);
+		}
+		else test = true;
 	}
-	
+
 	return 0;
 }
 
 int main(int argc, char argv[]) 
 {
-	
+	in
 
 	return 0;
 }
