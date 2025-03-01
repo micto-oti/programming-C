@@ -1,62 +1,10 @@
 ﻿  Lab4.cpp
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(19,8): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(19,15): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(19,15):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(21,8): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(21,15): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(21,15):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(23,8): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(23,15): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(23,15):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(35,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(35,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(35,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(37,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(37,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(37,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(39,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(39,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(39,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(46,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(46,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(46,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(48,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(48,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(48,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(50,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(50,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(50,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(57,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(57,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(57,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(59,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(59,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(59,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(61,10): warning C4129: "l": нераспознанная escape-последовательность символов
-E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(61,17): warning C4474: "scanf" : для строки формата передано слишком много аргументов
-      E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(61,17):
-      заполнители и их параметры ожидают переменное число аргументов в количестве 0, но было предоставлено 1
-  
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(23,9): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(25,9): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(27,9): warning C4477: "scanf": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "double *"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(52,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(53,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(54,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(59,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
+E:\projects\github\programming-C\Lab_C\Lab4\Lab4\Lab4.cpp(60,9): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "1" имеет тип "double"
   Lab4.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab4\x64\Debug\Lab4.exe

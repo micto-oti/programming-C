@@ -1,6 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <math.h>
 #include <stdio.h>
+#include <stdbool.h>
 
 /*
 Написать функции, вычисляющие периметр и площадь треугольника по значениям длин трёх его сторон. 
@@ -10,65 +11,53 @@
 
 // создаём функцию для ввода данных о сторонах треугольника
 
-int a, b, c;
+double a, b, c;
 
-int trianlge(int argc, char argv[])
-{
-	
-	printf("Input trianlnge side a: \n");
-	scanf("\lf", &a);
-	printf("Input trianlnge side b: \n");
-	scanf("\lf", &b);
-	printf("Input trianlnge side c: \n");
-	scanf("\lf", &c);
-	
-	int abside = a + b;
-	int bcside = b + c;
-	int acside = a + c;
+int triangle()
+{	
 	bool test = false;
 
 	// проверка на корректность данных
-	while (test != true) {
-		if (a > bcside) {
-			printf("a > b + c, you should change sides\n");
-			printf("Input trianlnge side a: \n");
-			scanf("\lf", &a);
-			printf("Input trianlnge side b: \n");
-			scanf("\lf", &b);
-			printf("Input trianlnge side c: \n");
-			scanf("\lf", &c);
-		}
-		else test = true;
+	while (!test) {
+		printf("Input trianlnge side a: \n");
+		scanf("%d", &a);
+		printf("Input trianlnge side b: \n");
+		scanf("%d", &b);
+		printf("Input trianlnge side c: \n");
+		scanf("%d", &c);
 
-		if (b > acside) {
-			printf("b > a + c, you should change sides\n");
-			printf("Input trianlnge side a: \n");
-			scanf("\lf", &a);
-			printf("Input trianlnge side b: \n");
-			scanf("\lf", &b);
-			printf("Input trianlnge side c: \n");
-			scanf("\lf", &c);
+		if (a + b > c && a + c > b && b + c > a) {
+			test = true;
 		}
-		else test = true;
+		else {
+			printf("Invalid side values\n");
+		}
 
-		if (c > abside) {
-			printf("c > a + b, you should change sides\n");
-			printf("Input trianlnge side a: \n");
-			scanf("\lf", &a);
-			printf("Input trianlnge side b: \n");
-			scanf("\lf", &b);
-			printf("Input trianlnge side c: \n");
-			scanf("\lf", &c);
-		}
-		else test = true;
 	}
 
 	return 0;
 }
 
+double calculateArea(double a, double b, double c) {
+	double p = (a + b + c) / 2;
+	return sqrt(p * (p - a) * (p - b) * (p - c));
+}
+
 int main(int argc, char argv[]) 
 {
-	in
+	double peremeter, S;
+	
+	
+	triangle();
+	printf("a = %d\n", a);
+	printf("b = %d\n", b);
+	printf("c = %d\n", c);
+
+
+	peremeter = a + b + c;
+	S = calculateArea(a, b, c);
+	printf("Peremeter = %d\n", peremeter);
+	printf("S = %d", S);
 
 	return 0;
 }
