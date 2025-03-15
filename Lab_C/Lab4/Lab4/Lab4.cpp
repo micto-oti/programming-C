@@ -2,6 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include "perim_s.h"
 
 /*
 Написать функции, вычисляющие периметр и площадь треугольника по значениям длин трёх его сторон. 
@@ -19,12 +20,12 @@ int triangle()
 
 	// проверка на корректность данных
 	while (!test) {
-		printf("Input trianlnge side a: \n");
-		scanf("%d", &a);
-		printf("Input trianlnge side b: \n");
-		scanf("%d", &b);
-		printf("Input trianlnge side c: \n");
-		scanf("%d", &c);
+		printf("Input triangle side a: \n");
+		scanf("%lf", &a);
+		printf("Input triangle side b: \n");
+		scanf("%lf", &b);
+		printf("Input triangle side c: \n");
+		scanf("%lf", &c);
 
 		if (a + b > c && a + c > b && b + c > a) {
 			test = true;
@@ -38,26 +39,22 @@ int triangle()
 	return 0;
 }
 
-double calculateArea(double a, double b, double c) {
-	double p = (a + b + c) / 2;
-	return sqrt(p * (p - a) * (p - b) * (p - c));
-}
-
 int main(int argc, char argv[]) 
 {
-	double peremeter, S;
+	double perimet, S;
 	
 	
 	triangle();
-	printf("a = %d\n", a);
-	printf("b = %d\n", b);
-	printf("c = %d\n", c);
+	printf("a = %f\n", a);
+	printf("b = %f\n", b);
+	printf("c = %f\n", c);
 
+	perimet = perimeter(a, b, c);
 
-	peremeter = a + b + c;
 	S = calculateArea(a, b, c);
-	printf("Peremeter = %d\n", peremeter);
-	printf("S = %d", S);
+
+	printf("Perimeter = %f\n", perimet);
+	printf("S = %f", S);
 
 	return 0;
 }

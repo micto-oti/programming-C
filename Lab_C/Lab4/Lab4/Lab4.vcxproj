@@ -128,6 +128,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab4.cpp" />
+    <ClCompile Include="perim_s.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="perim_s.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
