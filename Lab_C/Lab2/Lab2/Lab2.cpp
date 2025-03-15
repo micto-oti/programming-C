@@ -10,20 +10,23 @@
 
 int main(int argc, char* argv[]) {
 
-    int i, j;
-    double Array[3][3], sumg, sump;
+    int i, j, h, k;
+    double Arr[3][3], sumg = 0, sump = 0;
 
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             printf("A[%d][%d]: ", i, j);
-            scanf_s("%lf", &Array[i][j]);
+            scanf_s("%lf", &Arr[i][j]);
         }
+        
     }
 
-
-    sumg = Array[0][0] + Array[1][1] + Array[2][2];
-    sump = Array[0][2] + Array[1][1] + Array[2][0];
-
+    for (k = 0; k < i; k++) {
+        sumg += Arr[k][k];
+        //for (h = 0; h < i; h++) {
+        //    sump += Arr[h][k];
+        //}
+    }
 
     printf(" Sum main diag = %lf \n", sumg);
     printf(" Sum second diag = %lf \n", sump);

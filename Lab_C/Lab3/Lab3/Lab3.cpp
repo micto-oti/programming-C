@@ -26,9 +26,13 @@ int main(int argc, char argv[])
 		{
 			u_str[i] = 'B';
 		}
+		if (u_str[i] == '.')
+		{
+			u_str[i] = '!';
+		}
 	}
 
-	printf("Modified str: %s", u_str);
+	printf("\nModified str: %s\n", u_str);
 
 
 
