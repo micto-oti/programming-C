@@ -1,4 +1,2 @@
 ﻿  Lab2.cpp
-E:\projects\github\programming-C\Lab_C\Lab2\Lab2\Lab2.cpp(42,25): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-E:\projects\github\programming-C\Lab_C\Lab2\Lab2\Lab2.cpp(45,29): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   Lab2.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab2\x64\Debug\Lab2.exe

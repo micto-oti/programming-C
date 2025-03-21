@@ -18,19 +18,22 @@ int main(int argc, char* argv[]) {
             printf("A[%d][%d]: ", i, j);
             scanf_s("%lf", &Arr[i][j]);
         }
-        
     }
 
     for (k = 0; k < i; k++) {
         sumg += Arr[k][k];
-        //for (h = 0; h < i; h++) {
-        //    sump += Arr[h][k];
-        //}
     }
 
+    for (h = 0; h < i; h++) {
+        k--;
+        sump += Arr[h][k];
+        }
+    
     printf(" Sum main diag = %lf \n", sumg);
     printf(" Sum second diag = %lf \n", sump);
 
+
+    
     int B[2][2];
     int a, b, c, d;
     for (i = 0; i < 2; i++) {
@@ -47,7 +50,7 @@ int main(int argc, char* argv[]) {
     printf("%d \n", b);
     printf("%d ", c);
     printf("%d \n", d);
-
+    
 
     return 0;
 }
