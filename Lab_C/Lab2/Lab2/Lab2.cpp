@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             printf("A[%d][%d]: ", i, j);
-            scanf_s("%lf", &Arr[i][j]);
+            scanf_s("%lf", &Arr[i][j]); // заполняем матрицу
         }
     }
 
