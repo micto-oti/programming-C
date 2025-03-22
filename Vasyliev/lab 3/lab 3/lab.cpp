@@ -8,6 +8,8 @@ struct tnode
     struct tnode* lchild, * rchild;
 };
 
+
+
 struct tnode* tree_find(struct tnode* p, int val);
 struct tnode* tree_find(struct tnode* p, int val);
 int tree_height(struct tnode* p);

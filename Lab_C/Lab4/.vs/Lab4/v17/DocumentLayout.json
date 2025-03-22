@@ -3,16 +3,19 @@
   "WorkspaceRootPath": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|solutionrelative:Lab4\\perim_s.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\maksi\\Downloads\\Telegram Desktop\\main.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\Lab4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|solutionrelative:Lab4\\Lab4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|solutionrelative:Lab4\\perim_s.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\Lab4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|solutionrelative:Lab4\\Lab4.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F8B1610F-3570-41FD-A8A6-295D6E0B7C15}|Lab4\\Lab4.vcxproj|solutionrelative:Lab4\\perim_s.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,38 +30,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "main.c",
+              "DocumentMoniker": "C:\\Users\\maksi\\Downloads\\Telegram Desktop\\main.c",
+              "ToolTip": "C:\\Users\\maksi\\Downloads\\Telegram Desktop\\main.c",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-03-22T01:33:09.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "perim_s.h",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.h",
               "RelativeDocumentMoniker": "Lab4\\perim_s.h",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.h",
               "RelativeToolTip": "Lab4\\perim_s.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-03-15T03:25:47.364Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "perim_s.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.cpp",
               "RelativeDocumentMoniker": "Lab4\\perim_s.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\perim_s.cpp",
               "RelativeToolTip": "Lab4\\perim_s.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-15T03:24:41.447Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Lab4.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\Lab4.cpp",
               "RelativeDocumentMoniker": "Lab4\\Lab4.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\Lab4.cpp",
               "RelativeToolTip": "Lab4\\Lab4.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-01T02:07:25.589Z",
               "EditorCaption": ""
