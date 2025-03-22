@@ -3,9 +3,6 @@
   "WorkspaceRootPath": "E:\\projects\\github\\programming-C\\Lab_C\\Lab2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{43117BEA-54B4-42A9-88D2-96317FC9F6B8}|Lab2\\Lab2.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab2\\Lab2\\Lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{43117BEA-54B4-42A9-88D2-96317FC9F6B8}|Lab2\\Lab2.vcxproj|solutionrelative:Lab2\\Lab2.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -22,25 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Lab5.cpp",
-              "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp",
-              "RelativeDocumentMoniker": "..\\Lab5\\Lab5\\Lab5.cpp",
-              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp",
-              "RelativeToolTip": "..\\Lab5\\Lab5\\Lab5.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-22T02:11:59.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Lab2.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab2\\Lab2\\Lab2.cpp",
               "RelativeDocumentMoniker": "Lab2\\Lab2.cpp",
-              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab2\\Lab2\\Lab2.cpp",
-              "RelativeToolTip": "Lab2\\Lab2.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAABbAAAAAAAAAA==",
+              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab2\\Lab2\\Lab2.cpp*",
+              "RelativeToolTip": "Lab2\\Lab2.cpp*",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwDgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-28T11:18:13.416Z",
               "EditorCaption": ""

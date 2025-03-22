@@ -10,13 +10,13 @@
 
 int main(int argc, char* argv[]) {
 
-    int i, j, h, k;
+    int i, j, h, k, x;
     double Arr[3][3], sumg = 0, sump = 0; // объявлоналейяем матрицу и переменные для диаг
 
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
             printf("A[%d][%d]: ", i, j);
-            scanf_s("%lf", &Arr[i][j]); // заполняем матрицу
+            scanf("%lf", &Arr[i][j]); // заполняем матрицу
         }
     }
 
@@ -33,24 +33,32 @@ int main(int argc, char* argv[]) {
     printf(" Sum second diag = %lf \n", sump);
 
 
+
+
     
-    int B[2][2];
-    int a, b, c, d;
+    int B[2][2], R[2][2];
+    //int a, b, c, d;
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
             printf("B[%d][%d]: ", i, j); // заполнение матрицы
-            scanf_s("%d", &B[i][j]);
+            scanf("%d", &B[i][j]);
         }
     }
-    a = pow(B[0][0], 2) + (B[0][1] * B[1][0]); // ищем квадрат матрицы
-    b = (B[0][0] * B[0][1]) + (B[0][1] * B[1][1]);
-    c = (B[1][0] * B[0][0]) + (B[1][1] * B[1][0]);
-    d = (B[1][0] * B[0][1]) + pow(B[1][1], 2);
-    printf("%d ", a);
-    printf("%d \n", b);
-    printf("%d ", c);
-    printf("%d \n", d);
-    
+
+    for (j = 0; j < i; j++) {
+        for (h = 0; h < i; h++) {
+            R[j][h] = 0;
+            for (k = 0; k < i; k++) {
+                R[j][h] += B[j][k] * B[k][h];
+            }
+        }
+    }
+
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d\n", R[i][j]);
+        }
+    }
 
     return 0;
 }
