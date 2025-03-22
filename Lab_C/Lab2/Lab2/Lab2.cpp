@@ -56,8 +56,9 @@ int main(int argc, char* argv[]) {
 
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
-            printf("%d\n", R[i][j]);
+            printf("%d ", R[i][j]);
         }
+        printf("\n");
     }
 
     return 0;
