@@ -21,12 +21,12 @@ int main(int argc, char* argv[]) {
     }
 
     for (k = 0; k < i; k++) {
-        sumg += Arr[k][k];
+        sumg += Arr[k][k]; // вычисление главной диагонали
     }
 
     for (h = 0; h < i; h++) {
         k--;
-        sump += Arr[h][k];
+        sump += Arr[h][k]; // вычисление побочной диагонали
         }
     
     printf(" Sum main diag = %lf \n", sumg);
@@ -38,7 +38,7 @@ int main(int argc, char* argv[]) {
     int a, b, c, d;
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
-            printf("B[%d][%d]: ", i, j);
+            printf("B[%d][%d]: ", i, j); // заполнение матрицы
             scanf_s("%d", &B[i][j]);
         }
     }
