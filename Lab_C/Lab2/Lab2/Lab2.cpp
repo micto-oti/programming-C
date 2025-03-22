@@ -11,7 +11,7 @@
 int main(int argc, char* argv[]) {
 
     int i, j, h, k;
-    double Arr[3][3], sumg = 0, sump = 0;
+    double Arr[3][3], sumg = 0, sump = 0; // объявлоналейяем матрицу и переменные для диаг
 
     for (i = 0; i < 3; i++) {
         for (j = 0; j < 3; j++) {
