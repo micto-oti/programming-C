@@ -29,15 +29,14 @@ int main(int argc, char* argv[]) {
         sump += Arr[h][k]; // вычисление побочной диагонали
         }
     
-    printf(" Sum main diag = %lf \n", sumg);
-    printf(" Sum second diag = %lf \n", sump);
+    printf("\nSum main diag = %lf \n", sumg);
+    printf("Sum second diag = %lf \n\n", sump);
 
 
 
 
     
     int B[2][2], R[2][2];
-    //int a, b, c, d;
     for (i = 0; i < 2; i++) {
         for (j = 0; j < 2; j++) {
             printf("B[%d][%d]: ", i, j); // заполнение матрицы
@@ -49,12 +48,14 @@ int main(int argc, char* argv[]) {
         for (h = 0; h < i; h++) {
             R[j][h] = 0;
             for (k = 0; k < i; k++) {
-                R[j][h] += B[j][k] * B[k][h];
+                R[j][h] += B[j][k] * B[k][h]; // вычисляем квадрат матрицы
             }
         }
     }
 
-    for (i = 0; i < 2; i++) {
+    printf("\n");
+    
+    for (i = 0; i < 2; i++) {        // выводим квадрат матрицы
         for (j = 0; j < 2; j++) {
             printf("%d ", R[i][j]);
         }
