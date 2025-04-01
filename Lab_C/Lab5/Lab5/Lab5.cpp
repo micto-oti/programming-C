@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
 
 	for (m = 0; m < i; m++) {
 		for (j = 0; j < i;j++) {
-			printf("Input values for matrix 1: ");
+			printf("Input value for matrix 1 [%d][%d]: ", m, j);
 			scanf("%lf", &matrix1[m][j]);
 			
 		}
@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 
 	for (m = 0; m < i; m++) {
 		for (j = 0; j < i;j++) {
-			printf("Input values for matrix 2: ");
+			printf("Input values for matrix 2 [%d][%d]: ", m, j);
 			scanf("%lf", &matrix2[m][j]);
 
 		}
