@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\projects\\github\\programming-C\\Vasyliev\\Ltest\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{176B0517-73CB-446A-BB8A-9474AC0846B4}|Ltest\\Ltest.vcxproj|E:\\projects\\github\\programming-C\\Vasyliev\\Ltest\\Ltest\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{176B0517-73CB-446A-BB8A-9474AC0846B4}|Ltest\\Ltest.vcxproj|solutionrelative:Ltest\\FileName.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileName.cpp",
+              "DocumentMoniker": "E:\\projects\\github\\programming-C\\Vasyliev\\Ltest\\Ltest\\FileName.cpp",
+              "RelativeDocumentMoniker": "Ltest\\FileName.cpp",
+              "ToolTip": "E:\\projects\\github\\programming-C\\Vasyliev\\Ltest\\Ltest\\FileName.cpp",
+              "RelativeToolTip": "Ltest\\FileName.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-04T13:38:06.238Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
