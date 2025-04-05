@@ -1,11 +1,5 @@
 ﻿  Запуск удаленной сборки.
   Компиляция исходных файлов:
   Lab5-t.cpp
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,15): warning : unused variable ‘M’ [-Wunused-variable]
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,15): warning :     5 |     long long M, N;
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,15): warning :       |               ^
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,18): warning : unused variable ‘N’ [-Wunused-variable]
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,18): warning :     5 |     long long M, N;
-E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(5,18): warning :       |                  ^
   Связывание объектов
   Lab5-test.vcxproj -> E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\bin\x64\Debug\Lab5-test.out
