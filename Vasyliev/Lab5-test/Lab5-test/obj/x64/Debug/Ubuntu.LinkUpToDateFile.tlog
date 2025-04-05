@@ -1,0 +1,1 @@
+cd /mnt/e/projects/github/programming-C/Vasyliev/Lab5-test/Lab5-test; g++ -o "/mnt/e/projects/github/programming-C/Vasyliev/Lab5-test/Lab5-test/bin/x64/Debug/Lab5-test.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/mnt/e/projects/github/programming-C/Vasyliev/Lab5-test/Lab5-test/obj/x64/Debug/Lab5-t.o"

@@ -1,0 +1,1 @@
+cd /home/ub-micto/projects/Lab5-test/; g++ -o "/home/ub-micto/projects/Lab5-test/bin/x64/Debug/Lab5-test.out" -Wl,--no-undefined -Wl,-z,relro -Wl,-z,now -Wl,-z,noexecstack "/home/ub-micto/projects/Lab5-test/obj/x64/Debug/Lab5-t.o"
