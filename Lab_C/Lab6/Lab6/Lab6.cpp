@@ -22,12 +22,14 @@ int main() {
 		
 		if (last_str == NULL) continue;
 
-		year = atoi(last_str - 4);
+		printf("%s", last_str-4);
+
+		/*year = atoi(last_str + 4);
 
 		if (year > 1980) {
 			fprintf(output1, "%s", buffer);
 			printf("%s", buffer);
-		}
+		}*/
 
 	}
 
