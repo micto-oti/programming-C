@@ -2,9 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <locale.h>
+#include <windows.h>
+
 
 
 int main() {
+	SetConsoleOutputCP(CP_UTF8);
+	setlocale(LC_ALL, "Russian");
+
 	int year;
 	char buffer[256];
 
@@ -19,23 +25,11 @@ int main() {
 	while (fgets(buffer, sizeof(buffer), file1) != NULL) {
 		char* last_str = strrchr(buffer, ' ');
 		
-		/*if (last_str == NULL) {
-			continue;
-		}*/
-		
-		//printf("\n\nbefore: %s", last_str);  // Вывод: Hello
-		//last_str[strlen(last_str) - 2] = '\0'; // Удаляем последний символ
-
-		//printf("after: %s", last_str);  // Вывод: Hello
-
-		//
-		//printf("%s\n", last_str + 1);
-		
-		year = atoi(last_str + 1);
+		year = atoi(last_str);
 
 		if (year > 1980) {
-			fprintf(output1, "%s\n", buffer);
-			printf("%s\n", buffer);
+			fprintf(output1, "%s", buffer);
+			printf("%s", buffer);
 		}
 
 	}
