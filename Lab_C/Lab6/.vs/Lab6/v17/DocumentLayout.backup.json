@@ -30,8 +30,7 @@
               "RelativeToolTip": "Lab6\\data.txt",
               "ViewState": "AgIAAFsAAAAAAAAAAAAcwHEAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-04T13:55:49.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-04T13:55:49.393Z"
             },
             {
               "$type": "Document",
@@ -39,9 +38,9 @@
               "Title": "Lab6.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab6\\Lab6\\Lab6.cpp",
               "RelativeDocumentMoniker": "Lab6\\Lab6.cpp",
-              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab6\\Lab6\\Lab6.cpp",
-              "RelativeToolTip": "Lab6\\Lab6.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAYAAAAAAAAAA==",
+              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab6\\Lab6\\Lab6.cpp*",
+              "RelativeToolTip": "Lab6\\Lab6.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-04T13:40:30.255Z",
               "EditorCaption": ""

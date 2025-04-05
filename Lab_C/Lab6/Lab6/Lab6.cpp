@@ -1,15 +1,10 @@
-#define _CRT_SECURE_NO_WARNINGS
+﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <locale.h>
-#include <windows.h>
-
-
 
 int main() {
-	SetConsoleOutputCP(CP_UTF8);
-	setlocale(LC_ALL, "Russian");
+
 
 	int year;
 	char buffer[256];
@@ -18,7 +13,7 @@ int main() {
 	FILE* output1 = fopen("output.txt", "w");
 
 	if (file1 == NULL || output1 == NULL) {
-		printf("Can't open: 'data.txt' or 'output1.txt'");
+		printf("невозможно открыть: 'data.txt' or 'output1.txt'");
 		return 1;
 	}
 
