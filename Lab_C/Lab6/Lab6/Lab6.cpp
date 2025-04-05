@@ -16,8 +16,6 @@ int main() {
 		return 1;
 	}
 
-	
-
 	while (fgets(buffer, sizeof(buffer), file1) != NULL) {
 		char* last_str = strrchr(buffer, ' ');
 		
