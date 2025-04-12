@@ -1,9 +1,9 @@
-#include <math.h>
+﻿#include <math.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
-double ** mx_act(char action[2], double **matrix1, double **matrix2, int i) {
+double **mx_act(char action[2], double **matrix1, double **matrix2, int i) {
 	int k, j, m;
 	double **result = (double**)malloc(i * sizeof(double*));
 
