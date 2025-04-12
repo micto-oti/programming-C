@@ -29,12 +29,14 @@ int main() {
 	}
 
 
-	char** strings = NULL;
+	human *people = NULL;
 	int Humans = 0;
 	char name[50], surname[50];
 	int year;
 
-	while (fscanf(input_1, "%s %s %d", name, surname, year)) {
+	while (fscanf(input_1, "%s %s %d", name, surname, &year) == 3) {
+
+		people = realloc(people, (Humans + 1) * sizeof(Humans));
 
 
 	}
