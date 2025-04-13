@@ -1,151 +1,121 @@
-﻿#include <stdio.h>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
+﻿#include <iostream>
+#include <fstream>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <vector>
+#include <algorithm>
+#include <filesystem>
+#include <unordered_map>
 
-typedef struct word {
+namespace fs = std::filesystem;
+
+struct Word {
     int count;
-    char* w;
-} WORD;
+    std::string w;
+};
 
-WORD* words[100000];
-int totalw = 0;
+std::vector<Word*> words;
+std::unordered_map<std::string, Word*> wordMap;
 
-int cmpword_alpha(const void* a, const void* b);
-int cmpword_quant(const void* a, const void* b);
-char* getword(FILE* F);
-void add_word(const char* word);
+bool cmpword_alpha(const Word* a, const Word* b);
+bool cmpword_quant(const Word* a, const Word* b);
+std::string getword(std::ifstream& F);
+void add_word(const std::string& word);
 
-int main(int argc, char* argv[])
+int main()
 {
-    FILE* OUT1, * OUT2, * IN;
-    char* pword;
-
-    if (argc < 2)
-    {
-        printf("Вы забыли указать список файлов!\n");
-        exit(0);
-    }
-
-    // Открываем файлы для вывода
-    OUT1 = fopen("dict1.txt", "w");
-    OUT2 = fopen("dict2.txt", "w");
+    std::ofstream OUT1("dict1.txt"), OUT2("dict2.txt");
     if (!OUT1 || !OUT2)
     {
-        printf("Ошибка при создании файлов вывода!\n");
-        exit(1);
+        std::cerr << "Ошибка при создании файлов вывода!\n";
+        return 1;
     }
 
-    // Обрабатываем каждый файл из аргументов
-    for (int i = 1; i < argc; i++)
+    // Читаем все файлы из директории texts
+    for (const auto& entry : fs::directory_iterator("texts"))
     {
-        IN = fopen(argv[i], "r");
+        if (!entry.is_regular_file()) continue;
+
+        std::ifstream IN(entry.path());
         if (!IN)
         {
-            printf("Не удалось открыть файл %s\n", argv[i]);
+            std::cerr << "Не удалось открыть файл " << entry.path() << "\n";
             continue;
         }
 
-        printf("Обрабатывается файл %s\n", argv[i]);
+        std::cout << "Обрабатывается файл " << entry.path() << "\n";
 
-        while ((pword = getword(IN)) != NULL)
+        std::string word;
+        while (!(word = getword(IN)).empty())
         {
-            add_word(pword);
-            free(pword); // Освобождаем память, выделенную в getword
+            add_word(word);
         }
-
-        fclose(IN);
     }
 
     // Сортировка по алфавиту и вывод
-    qsort(words, totalw, sizeof(WORD*), cmpword_alpha);
-    for (int i = 0; i < totalw; i++)
+    std::sort(words.begin(), words.end(), cmpword_alpha);
+    for (const auto& w : words)
     {
-        fprintf(OUT1, "%s %d\n", words[i]->w, words[i]->count);
+        OUT1 << w->w << " " << w->count << "\n";
     }
 
     // Сортировка по частоте и вывод
-    qsort(words, totalw, sizeof(WORD*), cmpword_quant);
-    for (int i = 0; i < totalw; i++)
+    std::sort(words.begin(), words.end(), cmpword_quant);
+    for (const auto& w : words)
     {
-        fprintf(OUT2, "%s %d\n", words[i]->w, words[i]->count);
+        OUT2 << w->w << " " << w->count << "\n";
     }
 
-    // Освобождаем память и закрываем файлы
-    for (int i = 0; i < totalw; i++)
+    // Освобождаем память
+    for (auto& w : words)
     {
-        free(words[i]->w);
-        free(words[i]);
+        delete w;
     }
-
-    fclose(OUT1);
-    fclose(OUT2);
 
     return 0;
 }
 
-void add_word(const char* word)
+void add_word(const std::string& word)
 {
-    // Проверяем, есть ли слово уже в массиве
-    for (int i = 0; i < totalw; i++)
+    auto it = wordMap.find(word);
+    if (it != wordMap.end())
     {
-        if (strcmp(words[i]->w, word) == 0)
-        {
-            words[i]->count++;
-            return;
-        }
+        it->second->count++;
     }
-
-    // Если слова нет, добавляем новую запись
-    WORD* new_word = malloc(sizeof(WORD));
-    new_word->w = strdup(word);
-    new_word->count = 1;
-    words[totalw++] = new_word;
+    else
+    {
+        Word* new_word = new Word{ 1, word };
+        words.push_back(new_word);
+        wordMap[word] = new_word;
+    }
 }
 
-char* getword(FILE* F)
+std::string getword(std::ifstream& F)
 {
-    int c;
-    int buf_size = 32;
-    int len = 0;
-    char* buffer = malloc(buf_size * sizeof(char));
+    char c;
+    std::string word;
 
     // Пропускаем небуквенные символы
-    while ((c = fgetc(F)) != EOF && !isalpha(c));
+    while (F.get(c) && !isalpha(c));
 
-    if (c == EOF)
-    {
-        free(buffer);
-        return NULL;
-    }
+    if (!F) return "";
 
     // Читаем слово (буквы и цифры)
     do
     {
-        if (len + 1 >= buf_size)
-        {
-            buf_size *= 2;
-            buffer = realloc(buffer, buf_size);
-        }
-        buffer[len++] = tolower(c);
-    } while ((c = fgetc(F)) != EOF && (isalnum(c)));
+        word += tolower(c);
+    } while (F.get(c) && isalnum(c));
 
-    buffer[len] = '\0';
-
-    // Возвращаем указатель на слово
-    return buffer;
+    return word;
 }
 
-int cmpword_alpha(const void* a, const void* b)
+bool cmpword_alpha(const Word* a, const Word* b)
 {
-    WORD* wa = *(WORD**)a;
-    WORD* wb = *(WORD**)b;
-    return strcmp(wa->w, wb->w);
+    return a->w < b->w;
 }
 
-int cmpword_quant(const void* a, const void* b)
+bool cmpword_quant(const Word* a, const Word* b)
 {
-    WORD* wa = *(WORD**)a;
-    WORD* wb = *(WORD**)b;
-    return wb->count - wa->count; // Для сортировки по убыванию
+    return a->count > b->count; // Для сортировки по убыванию
 }
