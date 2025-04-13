@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\projects\\github\\programming-C\\Vasyliev\\Lab1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{93C74FF5-6B97-4E8B-B386-CE880CEFF083}|Lab1\\Lab1.vcxproj|E:\\projects\\github\\programming-C\\Vasyliev\\Lab1\\Lab1\\Lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{93C74FF5-6B97-4E8B-B386-CE880CEFF083}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{5158582F-9791-4546-86AC-74DC175E1D97}|Lab1\\Lab1.vcxproj|E:\\projects\\github\\programming-C\\Vasyliev\\Lab1\\Lab1\\Lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5158582F-9791-4546-86AC-74DC175E1D97}|Lab1\\Lab1.vcxproj|solutionrelative:Lab1\\Lab1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,9 +24,9 @@
               "RelativeDocumentMoniker": "Lab1\\Lab1.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Vasyliev\\Lab1\\Lab1\\Lab1.cpp",
               "RelativeToolTip": "Lab1\\Lab1.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-02-22T00:18:58.596Z",
+              "WhenOpened": "2025-04-13T03:10:17.252Z",
               "EditorCaption": ""
             }
           ]
