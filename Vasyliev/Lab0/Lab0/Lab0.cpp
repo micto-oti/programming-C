@@ -34,7 +34,7 @@ void sieve_of_eratosthenes(int n) {
     for (int i = 2; i <= n; i++) {
         if (P[i] == 1) {
             printf("%d ", i);
-        }
+        }   
     }
     printf("\n");
 
