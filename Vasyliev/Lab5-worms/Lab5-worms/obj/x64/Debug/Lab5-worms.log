@@ -1,0 +1,8 @@
+﻿  Запуск удаленной сборки.
+  Компиляция исходных файлов:
+  Lab5-worms.cpp
+E:\projects\github\programming-C\Vasyliev\Lab5-worms\Lab5-worms\Lab5-worms.cpp(48,40): error : invalid conversion from ‘void*’ to ‘int*’ [-fpermissive]
+E:\projects\github\programming-C\Vasyliev\Lab5-worms\Lab5-worms\Lab5-worms.cpp(48,40): error :    48 |         tree[parent].children = realloc(tree[parent].children, tree[parent].child_count * sizeof(int));
+E:\projects\github\programming-C\Vasyliev\Lab5-worms\Lab5-worms\Lab5-worms.cpp(48,40): error :       |                                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+E:\projects\github\programming-C\Vasyliev\Lab5-worms\Lab5-worms\Lab5-worms.cpp(48,40): error :       |                                        |
+E:\projects\github\programming-C\Vasyliev\Lab5-worms\Lab5-worms\Lab5-worms.cpp(48,40): error :       |                                        void*
