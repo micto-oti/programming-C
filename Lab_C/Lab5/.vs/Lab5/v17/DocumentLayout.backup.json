@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|solutionrelative:Lab5\\Lab5.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|solutionrelative:Lab5\\fncs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|solutionrelative:Lab5\\fncs.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B004CF75-EBA1-4883-A97E-616682B4DCD2}|Lab5\\Lab5.vcxproj|solutionrelative:Lab5\\fncs.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,29 +30,28 @@
               "Title": "Lab5.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp",
               "RelativeDocumentMoniker": "Lab5\\Lab5.cpp",
-              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp",
-              "RelativeToolTip": "Lab5\\Lab5.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAA8AAAANAAAAAAAAAA==",
+              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\Lab5.cpp*",
+              "RelativeToolTip": "Lab5\\Lab5.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-15T02:20:33.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "fncs.cpp",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.cpp",
               "RelativeDocumentMoniker": "Lab5\\fncs.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.cpp",
               "RelativeToolTip": "Lab5\\fncs.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-03-15T02:21:07.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-15T02:21:07.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "fncs.h",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab5\\Lab5\\fncs.h",
               "RelativeDocumentMoniker": "Lab5\\fncs.h",

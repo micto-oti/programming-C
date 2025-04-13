@@ -1,5 +1,8 @@
 ﻿  Запуск удаленной сборки.
   Компиляция исходных файлов:
   Lab5-t.cpp
+E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(76,32): warning : conversion from ‘long long int’ to ‘double’ may change value [-Wconversion]
+E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(76,32): warning :    76 |         if (N >= M || N < 1 || M > 1e7) {
+E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\Lab5-t.cpp(76,32): warning :       |                                ^
   Связывание объектов
   Lab5-test.vcxproj -> E:\projects\github\programming-C\Vasyliev\Lab5-test\Lab5-test\bin\x64\Debug\Lab5-test.out

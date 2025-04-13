@@ -1,86 +1,105 @@
-#include <stdio.h>
+п»ї#include <stdio.h>
 #include <string>
-#include <iomanip>
 #include <iostream>
 #include <fstream>
+#include <unistd.h>
+#include <sys/stat.h>
+#include <dirent.h>
+#include <vector>
+#include <algorithm>
+
+// Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РќРћР” (Р°Р»РіРѕСЂРёС‚Рј Р•РІРєР»РёРґР°)
+long long gcd(long long a, long long b) {
+    while (b != 0) {
+        long long temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
 
 int main() {
-    const std::string input_base = "/home/uыук/projects/test-pipes/input";
-    const std::string output_base = "/home/user/projects/test-pipes/output";
-    const std::string my_output = "/home/user/projects/my-test/output";
-
-
-    long long M, N;
-
-    long long numerator = M * N;
-    long long denominator = M - N;
-
-    FILE* output_file = fopen("/home/user/projects/Lab5-test/my-test/output", "w");
-    if (output_file == NULL) {
-        printf("Can't create: output.txt\n");
-        return 1;
-    }
-    
-
-    fprintf(output_file, "%lld/%lld\n", numerator, denominator);
-    fclose(output_file);
-
-
-    FILE* input_file = fopen("/home/user/projects/Lab5-test/input.txt", "r");
-    if (input_file == NULL) {
-        printf("Can't open: input.txt\n");
+    // РџРѕР»СѓС‡Р°РµРј РґРѕРјР°С€РЅСЋСЋ РґРёСЂРµРєС‚РѕСЂРёСЋ
+    const char* home_dir = getenv("HOME");
+    if (home_dir == nullptr) {
+        std::cerr << "РћС€РёР±РєР°: РЅРµ СѓРґР°Р»РѕСЃСЊ РѕРїСЂРµРґРµР»РёС‚СЊ РґРѕРјР°С€РЅСЋСЋ РґРёСЂРµРєС‚РѕСЂРёСЋ." << std::endl;
         return 1;
     }
 
-    fscanf(input_file, "%lld %lld", &N, &M);
-    fclose(input_file);
+    const std::string base_dir = std::string(home_dir) + "/projects/";
+    const std::string input_dir = base_dir + "Lab5-test/test_pipe/";
+    const std::string my_output_dir = base_dir + "Lab5-test/test_pipe/my-test/";
 
+    // РЎРѕР·РґР°С‘Рј РґРёСЂРµРєС‚РѕСЂРёСЋ РґР»СЏ РІС‹С…РѕРґРЅС‹С… С„Р°Р№Р»РѕРІ, РµСЃР»Рё РµС‘ РЅРµС‚
+    mkdir(my_output_dir.c_str(), 0777);
 
-    for (int i = 1; i <= 10; ++i) { // перебор от 01 до 10
-        // Форматируем номер с ведущим нулём (01, 02, ...)
-        std::string num_str = (i < 10) ? "0" + std::to_string(i) : std::to_string(i);
+    // --- Р”РёРЅР°РјРёС‡РµСЃРєРѕРµ С‡С‚РµРЅРёРµ РІСЃРµС… input-С„Р°Р№Р»РѕРІ ---
+    DIR* dir = opendir(input_dir.c_str());
+    if (dir == nullptr) {
+        perror(("РћС€РёР±РєР° РѕС‚РєСЂС‹С‚РёСЏ РґРёСЂРµРєС‚РѕСЂРёРё: " + input_dir).c_str());
+        return 1;
+    }
 
-        // Формируем имена входного и выходного файлов
-        std::string input_file = input_base + num_str + ".txt";
-        std::string output_file = output_base + num_str + ".txt";
-        std::string my_output = my_output + num_str + ".txt";
+    std::vector<std::string> input_files;
+    struct dirent* entry;
 
-
-        // Открываем входной файл
-        std::ifstream input(input_file);
-        if (!input.is_open()) {
-            std::cerr << "Ошибка: не удалось открыть " << input_file << std::endl;
-            continue; // пропускаем, если файла нет
+    // РЎРѕР±РёСЂР°РµРј РІСЃРµ С„Р°Р№Р»С‹, РЅР°С‡РёРЅР°СЋС‰РёРµСЃСЏ РЅР° "input"
+    while ((entry = readdir(dir)) != nullptr) {
+        std::string filename = entry->d_name;
+        if (filename.rfind("input", 0) == 0) { // Р•СЃР»Рё РёРјСЏ РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ "input"
+            input_files.push_back(filename);
         }
+    }
+    closedir(dir);
 
-        //// Открываем выходной файл
-        //std::ofstream output(output_file);
-        //if (!output.is_open()) {
-        //    std::cerr << "Ошибка: не удалось создать " << output_file << std::endl;
-        //    input.close();
-        //    continue;
-        //}
+    // РЎРѕСЂС‚РёСЂСѓРµРј С„Р°Р№Р»С‹ РїРѕ Р°Р»С„Р°РІРёС‚Сѓ (input01.txt, input02.txt, ...)
+    std::sort(input_files.begin(), input_files.end());
 
-        // Открываем тестовый выходной файл
-        std::ofstream my_out(my_output);
-        if (!my_out.is_open()) {
-            std::cerr << "Ошибка: не удалось создать " << output_file << std::endl;
-            input.close();
+    // РћР±СЂР°Р±Р°С‚С‹РІР°РµРј РєР°Р¶РґС‹Р№ РЅР°Р№РґРµРЅРЅС‹Р№ С„Р°Р№Р»
+    for (const auto& filename : input_files) {
+        std::string current_input = input_dir + "/" + filename;
+        std::string num_str = filename.substr(5, 2); // РР·РІР»РµРєР°РµРј "01" РёР· "input01.txt"
+        std::string current_my_output = my_output_dir + "output" + num_str + ".txt";
+
+        // Р§РёС‚Р°РµРј РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°
+        std::ifstream input(current_input);
+        if (!input.is_open()) {
+            std::cerr << "РќРµ СѓРґР°Р»РѕСЃСЊ РѕС‚РєСЂС‹С‚СЊ: " << current_input << std::endl;
             continue;
         }
 
-        // Читаем входной файл и записываем в выходной
-        std::string line;
-        while (std::getline(input, line)) {
-            my_out << line << "\n"; // или другая обработка
+        long long N, M;
+        input >> N >> M;
+        input.close();
+
+        // РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РґР°РЅРЅС‹С…
+        if (N >= M || N < 1 || M > 1e7) {
+            std::cerr << "РќРµРІРµСЂРЅС‹Рµ РґР°РЅРЅС‹Рµ РІ С„Р°Р№Р»Рµ: " << current_input << std::endl;
+            continue;
         }
 
-        // Закрываем файлы
-        input.close();
+        // Р’С‹С‡РёСЃР»СЏРµРј СЂРµР·СѓР»СЊС‚Р°С‚
+        long long numerator = M * N;
+        long long denominator = M - N;
+
+        // РЎРѕРєСЂР°С‰Р°РµРј РґСЂРѕР±СЊ
+        long long common_divisor = gcd(numerator, denominator);
+        numerator /= common_divisor;
+        denominator /= common_divisor;
+
+        // Р—Р°РїРёСЃС‹РІР°РµРј СЂРµР·СѓР»СЊС‚Р°С‚ РІ РІС‹С…РѕРґРЅРѕР№ С„Р°Р№Р»
+        std::ofstream my_out(current_my_output);
+        if (!my_out.is_open()) {
+            std::cerr << "РќРµ СѓРґР°Р»РѕСЃСЊ СЃРѕР·РґР°С‚СЊ: " << current_my_output << std::endl;
+            continue;
+        }
+
+        my_out << numerator << "/" << denominator << "\n";
         my_out.close();
 
-        std::cout << "Обработан: " << input_file << " -> " << output_file << std::endl;
+        std::cout << "РћР±СЂР°Р±РѕС‚Р°РЅ: " << current_input << " -> " << current_my_output << "\n";
+            //<< " (Р РµР·СѓР»СЊС‚Р°С‚: " << numerator << "/" << denominator << ")" << std::endl;
     }
-   
+
     return 0;
 }
