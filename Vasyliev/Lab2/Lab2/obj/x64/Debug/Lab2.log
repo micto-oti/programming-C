@@ -1,21 +1,8 @@
 ﻿  Запуск удаленной сборки.
   Компиляция исходных файлов:
   Lab2.cpp
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(100,28): error : invalid conversion from ‘void*’ to ‘WORD*’ {aka ‘word*’} [-fpermissive]
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(100,28): error :   100 |     WORD* new_word = malloc(sizeof(WORD));
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(100,28): error :       |                      ~~~~~~^~~~~~~~~~~~~~
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(100,28): error :       |                            |
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(100,28): error :       |                            void*
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(111,26): error : invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(111,26): error :   111 |     char* buffer = malloc(buf_size * sizeof(char));
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(111,26): error :       |                    ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(111,26): error :       |                          |
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(111,26): error :       |                          void*
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(128,29): error : invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(128,29): error :   128 |             buffer = realloc(buffer, buf_size);
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(128,29): error :       |                      ~~~~~~~^~~~~~~~~~~~~~~~~~
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(128,29): error :       |                             |
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(128,29): error :       |                             void*
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(130,32): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(130,32): warning :   130 |         buffer[len++] = tolower(c);
-E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(130,32): warning :       |                         ~~~~~~~^~~
+E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(11,21): error : ‘filesystem’ is not a namespace-name; did you mean ‘system’?
+E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(36,30): error : ‘fs’ has not been declared
+E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(107,24): warning : conversion from ‘int’ to ‘char’ may change value [-Wconversion]
+E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(107,24): warning :   107 |         word += tolower(c);
+E:\projects\github\programming-C\Vasyliev\Lab2\Lab2\Lab2.cpp(107,24): warning :       |                 ~~~~~~~^~~
