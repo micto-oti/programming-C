@@ -28,18 +28,19 @@ int main() {
 	}
 
 	while (fgets(buffer, sizeof(buffer), file1) != NULL) {
-		char* last_str = strrchr(buffer, ' ');
+		char* last_str = strchr(buffer, ' А');
 		
-		printf("%s", last_str);
+		//printf("%s", last_str);
 
 
 
-		/*year = atoi(last_str);
 
-		if (year > 1980) {
+		// year = atoi(last_str);
+
+		if (last_str) {
 			fprintf(output1, "%s", buffer);
 			printf("%s", buffer);
-		}*/
+		}
 
 	}
 
