@@ -1,74 +1,59 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
-#include <stdlib.h>
+#include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
-#include <sstream>
-#include <fstream>
+#include <algorithm>
 
-
-
-struct human {
-	char name[50];
-	char surname[50];
-	int B_year;
+struct humen {
+    std::string firstName;
+    std::string secondName;
+    std::string lastName;
+    int birthYear;
 };
 
-int SortByYear(const void *a, const void *b) {
-	const struct human* humanA = (const struct human*)a;
-	const struct human* humanB = (const struct human*)b;
-
-	return humanA->B_year - humanB->B_year;
+// Функция для сравнения двух структур humen по году рождения
+bool compareHumen(const humen& a, const humen& b) {
+    return a.birthYear < b.birthYear;
 }
-
 
 int main() {
-	std::vector<int> years;
+    std::vector<humen> people;
 
-	FILE* input_1 = fopen("data.txt", "r");
-	FILE* output_1 = fopen("output.txt", "w");
+    // Чтение данных из файла
+    std::ifstream inFile("data.txt");
+    if (!inFile) {
+        std::cerr << "Не удалось открыть файл для чтения." << std::endl;
+        return 1;
+    }
 
-	if (input_1 == NULL || output_1 == NULL) {
-		printf("невозможно открыть: 'data.txt' или 'output1.txt'");
-		return 1;
-	}
-	
-	struct human *people = NULL;
-	int Humans = 0;
-	char name[50], surname[50];
-	int year;
+    std::ofstream outFile("output.txt");
+    if (!outFile) {
+        std::cerr << "Не удалось открыть файл для записи." << std::endl;
+        return 1;
+    }
 
-	while (fscanf(input_1, "%49s %49s %49d", name, surname, &year) == 3) {
-		struct human *temp = (human*)realloc(people, (Humans + 1) * sizeof(struct human));
-		
-		years.push_back(year);
-		/*people = temp;
-		strcpy(people[Humans].name, name);
-		strcpy(people[Humans].surname, surname);
-		people[Humans].B_year = year;*/
-		Humans++;
+    humen temp;
+    while (inFile >> temp.firstName >> temp.secondName >> temp.lastName >> temp.birthYear) {
+        people.push_back(temp);
+    }
+    inFile.close();
 
+    // Сортировка вектора по году рождения
+    sort(people.begin(), people.end(), compareHumen);
 
-	}
-	
+    // Запись результата в файл
+    for (const auto& person : people) {
+        outFile << person.firstName << " "
+            << person.secondName << " "
+            << person.lastName << " "
+            << person.birthYear << std::endl;
+    }
+    outFile.close();
 
-	fclose(input_1);
+    std::cout << "Данные успешно обработаны и записаны в output.txt" << std::endl;
+    std::cout << "Обработано записей: " << people.size() << std::endl;
 
-	/*qsort(people, Humans, sizeof(struct human), SortByYear);*/
-
-	printf("Отсортировано по году рождения:\n");
-	for (int i = 0; i < Humans; i++) {
-		printf("%s %s, %d\n", people[i].name, people[i].surname, people[i].B_year);
-	}
-
-	free(people);
-	return 0;
-
-
-
-
-
-
-
-
+    return 0;
 }
+
