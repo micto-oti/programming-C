@@ -23,7 +23,7 @@ int SortByYear(const void *a, const void *b) {
 
 
 int main() {
-	
+	std::vector<int> years;
 
 	FILE* input_1 = fopen("data.txt", "r");
 	FILE* output_1 = fopen("output.txt", "w");
@@ -32,9 +32,7 @@ int main() {
 		printf("невозможно открыть: 'data.txt' или 'output1.txt'");
 		return 1;
 	}
-	int size_f = sizeof("data.txt");
-	int* years = (int*)malloc(sizeof("data.txt"));
-
+	
 	struct human *people = NULL;
 	int Humans = 0;
 	char name[50], surname[50];
@@ -43,20 +41,20 @@ int main() {
 	while (fscanf(input_1, "%49s %49s %49d", name, surname, &year) == 3) {
 		struct human *temp = (human*)realloc(people, (Humans + 1) * sizeof(struct human));
 		
-		
+		years.push_back(year);
 		/*people = temp;
 		strcpy(people[Humans].name, name);
 		strcpy(people[Humans].surname, surname);
-		people[Humans].B_year = year;
-		Humans++;*/
+		people[Humans].B_year = year;*/
+		Humans++;
 
 
 	}
-
+	
 
 	fclose(input_1);
 
-	qsort(people, Humans, sizeof(struct human), SortByYear);
+	/*qsort(people, Humans, sizeof(struct human), SortByYear);*/
 
 	printf("Отсортировано по году рождения:\n");
 	for (int i = 0; i < Humans; i++) {
