@@ -14,11 +14,8 @@
 */
 
 int main() {
-
-
-	int year;
 	char buffer[256];
-
+	
 	FILE* file1 = fopen("data.txt", "r");
 	FILE* output1 = fopen("output.txt", "w");
 
@@ -28,21 +25,17 @@ int main() {
 	}
 
 	while (fgets(buffer, sizeof(buffer), file1) != NULL) {
-		char* last_str = strchr(buffer, ' А');
+		char* fs = buffer;
 		
-		//printf("%s", last_str);
 
-
-
-
-		// year = atoi(last_str);
-
-		if (last_str) {
+		if (fs[0] == 'A') {  // Для кириллицы
 			fprintf(output1, "%s", buffer);
 			printf("%s", buffer);
 		}
-
+		
 	}
+	fclose(file1);
+	fclose(output1);
 
 	return 0;
 }
