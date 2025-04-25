@@ -23,6 +23,7 @@ int SortByYear(const void *a, const void *b) {
 
 
 int main() {
+	double years = realloc();
 
 	FILE* input_1 = fopen("data.txt", "r");
 	FILE* output_1 = fopen("output.txt", "w");
