@@ -23,7 +23,7 @@ int SortByYear(const void *a, const void *b) {
 
 
 int main() {
-	double years = realloc();
+	
 
 	FILE* input_1 = fopen("data.txt", "r");
 	FILE* output_1 = fopen("output.txt", "w");
@@ -32,7 +32,8 @@ int main() {
 		printf("невозможно открыть: 'data.txt' или 'output1.txt'");
 		return 1;
 	}
-
+	int size_f = sizeof("data.txt");
+	int* years = (int*)malloc(sizeof("data.txt"));
 
 	struct human *people = NULL;
 	int Humans = 0;
@@ -40,13 +41,14 @@ int main() {
 	int year;
 
 	while (fscanf(input_1, "%49s %49s %49d", name, surname, &year) == 3) {
-
 		struct human *temp = (human*)realloc(people, (Humans + 1) * sizeof(struct human));
-		people = temp;
+		
+		
+		/*people = temp;
 		strcpy(people[Humans].name, name);
 		strcpy(people[Humans].surname, surname);
 		people[Humans].B_year = year;
-		Humans++;
+		Humans++;*/
 
 
 	}
