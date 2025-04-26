@@ -26,9 +26,8 @@ int main() {
 
 	while (fgets(buffer, sizeof(buffer), file1) != NULL) {
 		char* fs = buffer;
-		
 
-		if (fs[0] == 'A') {  // Для кириллицы
+		if (fs[0] == 'A') {
 			fprintf(output1, "%s", buffer);
 			printf("%s", buffer);
 		}
