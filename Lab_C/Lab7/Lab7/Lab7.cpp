@@ -18,8 +18,10 @@ struct humen {
 };
 
 // функция сравнения
-int compareHumen(const void* a, const void* b) {
-    return ((const humen*)a) -> Year - ((const humen*)b) -> Year;
+int compareHumen(const humen* a, const humen* b) {
+    if (a->Year != b->Year) {
+        return a->Year - b->Year;
+    }
 }
 
 int main() {
@@ -27,7 +29,7 @@ int main() {
     char buffer[256];
     int i;
 
-    // открытие файла ввода и создание файла вывода
+    // открытие файлов ввода и вывода, создание файла вывода
     FILE* input1 = fopen("data.txt", "r");
     FILE* output1 = fopen("output.txt", "w");
     if (!input1 || !output1) {
@@ -38,26 +40,34 @@ int main() {
     while (fgets(buffer, sizeof(buffer), input1)) { // определяем размер файла ввода
         count++;
     }
+    rewind(input1);
 
     humen* people = (humen*)malloc(count * sizeof(humen));
 
-    FILE* input1 = fopen("data.txt", "r"); // открытие файла для чтения
 
-    for (i = 0; i < count; i++) { // чтение элементов из файла
+    for (i = 0; i < count; i++) { 
         fscanf(input1, "%s %s %s %d", people[i].secondName, people[i].Name, people[i].lastName, &people[i].Year); 
     }
     fclose(input1);
 
     // сортировка массива
-    qsort(people, count, sizeof(humen), compareHumen);
+    for (int i = 0; i < count - 1; i++) {
+        for (int j = 0; j < count - i - 1; j++) {
+            if (compareHumen(&people[j], &people[j + 1]) > 0) {
+                humen temp = people[j];
+                people[j] = people[j + 1];
+                people[j + 1] = temp;
+            }
+        }
+    }
+    
 
-    // запись результата в файл
     for (int i = 0; i < count; ++i) {
         fprintf(output1, "%s %s %s %d\n", people[i].secondName, people[i].Name, people[i].lastName, people[i].Year);
     }
     fclose(output1);
 
-    // освобождение памяти
+    
     free(people);
 
     printf("Данные успешно обработаны и записаны в output.txt\n");
