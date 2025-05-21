@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+
 
 
 /*
@@ -17,11 +17,11 @@ double act(char* exp) {
     char* token;
     char* rest = exp;
 
-    // первый символ 
-    token = strtok_s(rest, " ", &rest);
+
+    token = strtok_s(rest, " \t", &rest);
     while (token != NULL) {
         result += atof(token);
-        token = strtok_s(NULL, " \t", &rest);
+        token = strtok_s(NULL, " ", &rest);
     }
 
     return result;
@@ -29,61 +29,38 @@ double act(char* exp) {
 
 int main() {
     char st[1000];
-    printf("Введите выражение (например, \"-123.5 + 4 - 456+56\"): ");
+    int i = 0, j = 0;
+    printf("введите выражение: ");
     fgets(st, sizeof(st), stdin);
 
-    st[strcspn(st, "\n")] = '\0';
-
-    int length = sizeof(st) / sizeof(st[0]);
-    char res[1000];
-    int index = 0;
-
-    /* удаляем все пробелы */
-    for (int i = 0; st[i] != '\0'; i++) {
-        if (!isspace((unsigned char)st[i])) {
-            res[index++] = st[i];
-        }
-    }
-    res[index] = '\0';
-
-
-    int res_l = strlen(res);
-    int k, j = 0;
-    for (k = 0; res[k] != '\0'; ) {
-        if ((res[k] == '+' && res[k + 1] == '-') ||
-            (res[k] == '-' && res[k + 1] == '+')) {
-            res[j++] = '-';
-            k += 2;
-        }
-        else if (res[k] == '-' && res[k + 1] == '-') {
-            res[j++] = '+';
-            k += 2;
-        }
-        else if (res[k] == '+' && res[k + 1] == '+') {
-            res[j++] = '+';
-            k += 2;
-        }
-        else {
-            res[j++] = res[k++];
-        }
-    }
-    res[j] = '\0';
-
-
-    int i;
-    char temp[2000] = {0};
+    int res_l = strlen(st);
+    char temp[1000];
     for (i = 0; i < res_l; i++) {
-        if (res[i] == '+' || res[i] == '-') {
-            strcat(temp, " ");
-            strcat(temp, (char[]) { res[i], '\0' });
-        }
+        if (st[i] == ' ');
         else {
-            strcat(temp, (char[]) { res[i], '\0' });
+            temp[j++] = st[i];
         }
     }
+    temp[j++] = '\0';
 
-    double result = act(temp);
-    printf("Результат: %f\n", result);
+
+    j = 0;
+    char res[1005];
+    res_l = strlen(temp);
+    printf("%i\n", res_l);
+    for (i = 0; i < res_l; i++) {
+        if (temp[i] == '-' || temp[i] == '+') {
+            res[j++] = ' ';
+            res[j++] = temp[i];
+        }
+        else {
+            res[j++] = temp[i];
+        }
+    }
+    res[j++] = '\0';
+
+    double rsl = act(res);
+    printf("ответ: %f", rsl);
 
     return 0;
 }

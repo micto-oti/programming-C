@@ -34,7 +34,8 @@
               "RelativeToolTip": "Lab4\\perim_s.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-03-15T03:25:47.364Z"
+              "WhenOpened": "2025-03-15T03:25:47.364Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -57,7 +58,7 @@
               "RelativeDocumentMoniker": "Lab4\\Lab4.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab4\\Lab4\\Lab4.cpp",
               "RelativeToolTip": "Lab4\\Lab4.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-01T02:07:25.589Z",
               "EditorCaption": ""

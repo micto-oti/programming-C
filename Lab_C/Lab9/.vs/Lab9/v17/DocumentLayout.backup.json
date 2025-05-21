@@ -5,6 +5,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{5A705D85-4A79-485C-B17C-30B7EC2370B5}|Lab9\\Lab9.vcxproj|E:\\projects\\github\\programming-C\\Lab_C\\Lab9\\Lab9\\Lab9.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5A705D85-4A79-485C-B17C-30B7EC2370B5}|Lab9\\Lab9.vcxproj|solutionrelative:Lab9\\Lab9.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\progs\\Microsoft Visual Studio\\community\\VC\\Tools\\MSVC\\14.43.34808\\crt\\src\\vcruntime\\gs_report.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +20,39 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "gs_report.c",
+              "DocumentMoniker": "E:\\progs\\Microsoft Visual Studio\\community\\VC\\Tools\\MSVC\\14.43.34808\\crt\\src\\vcruntime\\gs_report.c",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\progs\\Microsoft Visual Studio\\community\\VC\\Tools\\MSVC\\14.43.34808\\crt\\src\\vcruntime\\gs_report.c",
+              "ToolTip": "E:\\progs\\Microsoft Visual Studio\\community\\VC\\Tools\\MSVC\\14.43.34808\\crt\\src\\vcruntime\\gs_report.c",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\progs\\Microsoft Visual Studio\\community\\VC\\Tools\\MSVC\\14.43.34808\\crt\\src\\vcruntime\\gs_report.c",
+              "ViewState": "AgIAAMEBAAAAAAAAAAAwwNABAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2025-05-10T02:56:37.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "stdio.h",
+              "DocumentMoniker": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ToolTip": "C:\\Program Files (x86)\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ViewState": "AgIAAHYCAAAAAAAAAAAwwIUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-05-10T02:33:44.583Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Lab9.c",
               "DocumentMoniker": "E:\\projects\\github\\programming-C\\Lab_C\\Lab9\\Lab9\\Lab9.c",
               "RelativeDocumentMoniker": "Lab9\\Lab9.c",
-              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab9\\Lab9\\Lab9.c",
-              "RelativeToolTip": "Lab9\\Lab9.c",
-              "ViewState": "AgIAACgAAAAAAAAAAAAmwDIAAAARAAAAAAAAAA==",
+              "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab9\\Lab9\\Lab9.c*",
+              "RelativeToolTip": "Lab9\\Lab9.c*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAADEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-05-02T22:56:41.424Z",
               "EditorCaption": ""

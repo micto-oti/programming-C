@@ -1,0 +1,4 @@
+﻿  Lab15.c
+E:\projects\github\programming-C\Lab_C\Lab15\Lab15\Lab15.c(26,5): warning C4013: strlen: нет определения; предполагается "extern" с возвратом типа "int"
+E:\projects\github\programming-C\Lab_C\Lab15\Lab15\Lab15.c(26,21): warning C4047: =: "char" отличается по уровням косвенного обращения от "char [2]"
+  Lab15.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab15\x64\Debug\Lab15.exe

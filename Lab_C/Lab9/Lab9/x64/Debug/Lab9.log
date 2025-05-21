@@ -1,3 +1,4 @@
 ﻿  Lab9.c
-E:\projects\github\programming-C\Lab_C\Lab9\Lab9\Lab9.c(50,17): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+E:\projects\github\programming-C\Lab_C\Lab9\Lab9\Lab9.c(49,13): warning C4267: =: преобразование из "size_t" в "int"; возможна потеря данных
+E:\projects\github\programming-C\Lab_C\Lab9\Lab9\Lab9.c(36,17): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
   Lab9.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab9\x64\Debug\Lab9.exe
