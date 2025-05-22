@@ -2,9 +2,9 @@
 #include <stdio.h>
 #include <setjmp.h>
 
-int fibonacci(int n) {
+int fib(int n) {
     if (n <= 2) return 1;
-    return fibonacci(n - 1) + fibonacci(n - 2);
+    return fib(n - 1) + fib(n - 2);
 }
 
 void fib_sum(jmp_buf env, int* count, int limit, int* sum) {
@@ -13,25 +13,25 @@ void fib_sum(jmp_buf env, int* count, int limit, int* sum) {
     }
 
     (*count)++;
-    *sum += fibonacci(*count);
+    *sum += fib(*count);
 
     fib_sum(env, count, limit, sum);
 }
 
 int main() {
-    jmp_buf jump_buffer;
+    jmp_buf buffer;
     int count = 0;
-    int limit = 0;
+    int lim = 0;
     int sum = 0;
 
     printf("Введите количество чисел Фибоначчи для суммирования: ");
-    scanf("%d", &limit);
+    scanf("%d", &lim);
 
-    if (setjmp(jump_buffer) == 0) {
-        fib_sum(jump_buffer, &count, limit, &sum);
+    if (setjmp(buffer) == 0) {
+        fib_sum(buffer, &count, lim, &sum);
     }
     else {
-        printf("Сумма первых %d чисел Фибоначчи: %d\n", limit, sum);
+        printf("Сумма первых %d чисел Фибоначчи: %d\n", lim, sum);
     }
 
     return 0;
