@@ -168,8 +168,8 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Плагин больше не активен"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -177,8 +177,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,8 +197,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "79f1da4563fb8e17",
+  "active": "0608a0eb4b7be916",
   "lastOpenFiles": [
+    "Текстовый документ.txt",
     "Диздок.md",
     "Сюжет.md"
   ]

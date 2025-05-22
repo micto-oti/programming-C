@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.VC.db
+*.opendb
+
+# Build output
+Debug/
+Release/
+*.exe
+*.obj
+*.pdb
+
+# Obsidian
+.obsidian/workspace
+
+# Misc
+*.log
+*.tmp
