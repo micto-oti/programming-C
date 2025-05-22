@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -25,6 +25,10 @@
               "Name": "ST:1:0:{ebe3f1d5-feac-4131-bf03-0e85ffb89a89}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{ebe3f1d5-feac-4131-bf03-0e85ffb89a89}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Lab14.c",
@@ -32,7 +36,7 @@
               "RelativeDocumentMoniker": "Lab14\\Lab14.c",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab14\\Lab14\\Lab14.c",
               "RelativeToolTip": "Lab14\\Lab14.c",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
               "WhenOpened": "2025-05-21T12:59:51.739Z",
               "EditorCaption": ""
