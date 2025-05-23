@@ -9,7 +9,7 @@
 В качестве обработчика должно быть реализовано логирование (вывод на консоль).
 */
 
-void signal_handler(int sig) {
+void sig_handler(int sig) {
     switch (sig) {
     case SIGABRT:
         printf("[LOG] Получен сигнал SIGABRT\n");
@@ -35,13 +35,13 @@ void signal_handler(int sig) {
     exit(sig);
 }
 
-void setup_signal_handlers() {
-    signal(SIGABRT, signal_handler);
-    signal(SIGFPE, signal_handler);
-    signal(SIGILL, signal_handler);
-    signal(SIGINT, signal_handler);
-    signal(SIGSEGV, signal_handler);
-    signal(SIGTERM, signal_handler);
+void sig_hand() {
+    signal(SIGABRT, sig_handler);
+    signal(SIGFPE, sig_handler);
+    signal(SIGILL, sig_handler);
+    signal(SIGINT, sig_handler);
+    signal(SIGSEGV, sig_handler);
+    signal(SIGTERM, sig_handler);
 }
 
 void print_menu() {
@@ -55,7 +55,7 @@ void print_menu() {
 }
 
 int main() {
-    setup_signal_handlers();
+    sig_hand();
 
     int choice;
     while (1) {
