@@ -57,18 +57,18 @@ void print_menu() {
 int main() {
     sig_hand();
 
-    int choice;
+    int ch;
     while (1) {
-        printf("\nВыберите сигнал для возбуждения:"
-            "\n 1. SIGABRT\n"
+        printf("Выберите сигнал для возбуждения:\n"
+            "1. SIGABRT\n"
             "2. SIGFPE\n"
             "3. SIGILL\n"
             "4. SIGINT\n"
             "5. SIGSEGV\n"
             "6. SIGTERM\n");
-        scanf("%d", &choice);
+        scanf("%d", &ch);
 
-        switch (choice) {
+        switch (ch) {
         case 1:
             raise(SIGABRT);
             break;
