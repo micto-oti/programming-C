@@ -33,7 +33,9 @@ int main() {
     printf("Введите количество чисел Фибоначчи для суммирования: ");
     scanf("%d", &lim);
 
-    if (setjmp(buffer) == 0) {
+    int checkpoint = setjmp(buffer);
+
+    if (checkpoint == 0) {
         fib_sum(buffer, &count, lim, &sum);
     }
     else {
