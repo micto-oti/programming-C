@@ -73,9 +73,10 @@ int main() {
             raise(SIGABRT);
             break;
         case 2: {
-            int zero = 0;
-            int x = 1 / zero; // Вызовет SIGFPE
-            (void)x;
+            raise(SIGFPE);
+            //int zero = 0;
+            //int x = 1 / zero; // Вызовет SIGFPE
+            //(void)x;
             break;
         }
         case 3:
@@ -85,8 +86,9 @@ int main() {
             raise(SIGINT);
             break;
         case 5: {
-            int* p = NULL;
-            *p = 42; // Вызовет SIGSEGV
+            raise(SIGSEGV);
+            //int* p = NULL;
+            //*p = 42; // Вызовет SIGSEGV
             break;
         }
         case 6:
