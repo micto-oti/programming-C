@@ -12,7 +12,7 @@
 void sig_handler(int sig) {
     switch (sig) {
     case SIGABRT:
-        printf("Сигнал SIGABRT\n");
+        printf("Сигнал SIGABRT (abort)\n");
         break;
     case SIGFPE:
         printf("Сигнал SIGFPE (ошибка вычесленй)\n");
