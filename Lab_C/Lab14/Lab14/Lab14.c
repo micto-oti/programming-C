@@ -32,7 +32,7 @@ int main() {
     int checkpoint = setjmp(buffer);
     
     if (checkpoint == 0) {
-        fib_sum(buffer, &count, lim, &sum);
+        fib_sum(buffer, &count, lim, &sum, 1, 1);
     }
     else {
         printf("Сумма первых %d чисел Фибоначчи: %d\n", lim, sum);

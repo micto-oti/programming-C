@@ -1,2 +1,2 @@
 ﻿  Lab14.c
-E:\projects\github\programming-C\Lab_C\Lab14\Lab14\Lab14.c(35,9): error C2198: void fib_sum(_JBTYPE *,int *,int,int *,int,int): слишком мало аргументов для вызова
+  Lab14.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab14\x64\Debug\Lab14.exe
