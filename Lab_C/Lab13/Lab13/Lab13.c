@@ -1,7 +1,7 @@
-﻿#include <stdio.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
-#include <string.h>
 
 void signal_handler(int sig) {
     switch (sig) {
@@ -26,7 +26,7 @@ void signal_handler(int sig) {
     default:
         printf("[LOG] Получен неизвестный сигнал: %d\n", sig);
     }
-    exit(sig);  // Завершаем программу после обработки
+    exit(sig);
 }
 
 void setup_signal_handlers() {
@@ -39,8 +39,7 @@ void setup_signal_handlers() {
 }
 
 void print_menu() {
-    printf("\nВыберите сигнал для возбуждения:\n");
-    printf("1. SIGABRT\n");
+    printf("\nВыберите сигнал для возбуждения:\n 1. SIGABRT\n");
     printf("2. SIGFPE\n");
     printf("3. SIGILL\n");
     printf("4. SIGINT\n");
