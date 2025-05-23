@@ -2,27 +2,35 @@
 #include <stdio.h>
 #include <setjmp.h>
 
+int fibonacci(int a, int b) {
+    if (current_index > n) {
+        longjmp(jump_point, 1);  // Всё, достаточно — выходим
+    }
 
-void some_recursive_function(int n) {
-    if (n > 5) {
-        printf("Достигли n = %d, возвращаемся\n", n);
-        longjmp(buffer, 1);  // Возврат в контрольную точку
-    }
-    else {
-        printf("В рекурсии: n = %d\n", n);
-        some_recursive_function(n + 1);
-    }
+    int result = a + b;
+    sum += result;
+    current_index++;
+
+    return fibonacci(b, result);
 }
 
 int main() {
     jmp_buf buffer;
+    int sum = 0;
+    int n = 0;
+    int current_index = 1;
 
-    setjmp(jump_buffer);  // Просто устанавливаем контрольную точку, ничего не сохраняем
+    printf("Введите количество чисел Фибоначчи для суммирования: ");
+    scanf("%d", &n);
 
-    printf("Начинаем рекурсию...\n");
-    some_recursive_function(1);
+    setjmp(buffer);
 
-    printf("Программа завершилась\n");
+    sum = 1 + 1;
+    current_index = 3;
+    fibonacci(1, 1);
+
+    printf("Сумма первых %d чисел Фибоначчи: %d\n", n, sum);
+
     return 0;
 }
 
