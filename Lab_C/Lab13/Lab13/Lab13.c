@@ -12,25 +12,23 @@
 void sig_handler(int sig) {
     switch (sig) {
     case SIGABRT:
-        printf("[LOG] Получен сигнал SIGABRT\n");
+        printf("Сигнал SIGABRT\n");
         break;
     case SIGFPE:
-        printf("[LOG] Получен сигнал SIGFPE (ошибка арифметики)\n");
+        printf("Сигнал SIGFPE (ошибка вычесления)\n");
         break;
     case SIGILL:
-        printf("[LOG] Получен сигнал SIGILL (недопустимая инструкция)\n");
+        printf("Сигнал SIGILL (недопустимая инструкция)\n");
         break;
     case SIGINT:
-        printf("[LOG] Получен сигнал SIGINT (Ctrl+C)\n");
+        printf("Сигнал SIGINT (Ctrl+C)\n");
         break;
     case SIGSEGV:
-        printf("[LOG] Получен сигнал SIGSEGV (ошибка доступа к памяти)\n");
+        printf("Сигнал SIGSEGV (ошибка доступа к памяти)\n");
         break;
     case SIGTERM:
-        printf("[LOG] Получен сигнал SIGTERM (запрос завершения)\n");
+        printf("Сигнал SIGTERM (запрос завершения)\n");
         break;
-    default:
-        printf("[LOG] Получен неизвестный сигнал: %d\n", sig);
     }
     exit(sig);
 }
@@ -59,7 +57,7 @@ int main() {
 
     int ch;
     while (1) {
-        printf("Выберите сигнал для возбуждения:\n"
+        printf("Выберите сигнал:\n"
             "1. SIGABRT\n"
             "2. SIGFPE\n"
             "3. SIGILL\n"
@@ -94,11 +92,6 @@ int main() {
         case 6:
             raise(SIGTERM);
             break;
-        case 0:
-            printf("Выход из программы.\n");
-            return 0;
-        default:
-            printf("Неверный выбор, попробуйте снова.\n");
         }
     }
 
