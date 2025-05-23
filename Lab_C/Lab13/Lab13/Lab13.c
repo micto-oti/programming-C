@@ -15,10 +15,10 @@ void sig_handler(int sig) {
         printf("Сигнал SIGABRT\n");
         break;
     case SIGFPE:
-        printf("Сигнал SIGFPE (ошибка вычесления)\n");
+        printf("Сигнал SIGFPE (ошибка вычесленй)\n");
         break;
     case SIGILL:
-        printf("Сигнал SIGILL (недопустимая инструкция)\n");
+        printf("Сигнал SIGILL (ошибка выполнения)\n");
         break;
     case SIGINT:
         printf("Сигнал SIGINT (Ctrl+C)\n");
