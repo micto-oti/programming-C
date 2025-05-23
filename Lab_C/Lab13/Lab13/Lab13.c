@@ -30,7 +30,7 @@ void sig_handler(int sig) {
         printf("Сигнал SIGTERM (запрос завершения)\n");
         break;
     }
-    exit(sig);
+    
 }
 
 void sig_hand() {
