@@ -3,6 +3,12 @@
 #include <stdlib.h>
 #include <signal.h>
 
+/*
+Написать программу, обрабатывающую получение сигналов (SIGABRT, SIGFPE, SIGILL, SIGINT, SIGSEGV, SIGTERM). 
+Также программа, может возбуждать эти сигналы по указанию пользователя. 
+В качестве обработчика должно быть реализовано логирование (вывод на консоль).
+*/
+
 void signal_handler(int sig) {
     switch (sig) {
     case SIGABRT:
@@ -39,14 +45,13 @@ void setup_signal_handlers() {
 }
 
 void print_menu() {
-    printf("\nВыберите сигнал для возбуждения:\n 1. SIGABRT\n");
-    printf("2. SIGFPE\n");
-    printf("3. SIGILL\n");
-    printf("4. SIGINT\n");
-    printf("5. SIGSEGV\n");
-    printf("6. SIGTERM\n");
-    printf("0. Выход\n");
-    printf("Введите номер: ");
+    printf("\nВыберите сигнал для возбуждения:"
+        "\n 1. SIGABRT\n"
+        "2. SIGFPE\n"
+        "3. SIGILL\n"
+        "4. SIGINT\n"
+        "5. SIGSEGV\n"
+        "6. SIGTERM\n");
 }
 
 int main() {
@@ -54,7 +59,13 @@ int main() {
 
     int choice;
     while (1) {
-        print_menu();
+        printf("\nВыберите сигнал для возбуждения:"
+            "\n 1. SIGABRT\n"
+            "2. SIGFPE\n"
+            "3. SIGILL\n"
+            "4. SIGINT\n"
+            "5. SIGSEGV\n"
+            "6. SIGTERM\n");
         scanf("%d", &choice);
 
         switch (choice) {
