@@ -61,13 +61,7 @@ int main() {
 
     int ch;
     while (1) {
-        printf("Выберите сигнал:\n"
-            "1. SIGABRT\n"
-            "2. SIGFPE\n"
-            "3. SIGILL\n"
-            "4. SIGINT\n"
-            "5. SIGSEGV\n"
-            "6. SIGTERM\n");
+        printf("Выберите сигнал:\n1. SIGABRT\n2. SIGFPE\n3. SIGILL\n4. SIGINT\n5. SIGSEGV\n6. SIGTERM\n");
         scanf("%d", &ch);
 
         switch (ch) {
