@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "560f98f74957de2f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Диздок.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Диздок"
-            }
-          },
-          {
             "id": "79f1da4563fb8e17",
             "type": "leaf",
             "state": {
@@ -31,8 +17,7 @@
               "title": "Новая вкладка"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -197,7 +182,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a2b0d487234a8678",
+  "active": "79f1da4563fb8e17",
   "lastOpenFiles": [
     "Lab_C/Lab13/Lab13/x64/Debug/Lab13.tlog/link.read.2.tlog",
     "Lab_C/Lab13/Lab13/x64/Debug/Lab13.tlog/unsuccessfulbuild",
