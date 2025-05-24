@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <setjmp.h>
 
+/* Использованные ссылки */
+// https://metanit.com/c/tutorial/10.2.php
+// https://en.wikipedia.org/wiki/Fibonacci_number
+// https://www.geeksforgeeks.org/fibonacci-series-2/
+
 /*
 Написать программу с использованием нелокального перехода setjmp/longjmp, 
 которая вычисляет сумму чисел Фибоначчи (начиная с1, 1,...). Использовать рекурсивную функции для вычисления суммы, 

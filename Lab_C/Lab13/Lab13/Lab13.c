@@ -3,6 +3,10 @@
 #include <stdlib.h>
 #include <signal.h>
 
+/* Использованные ссылки */
+// https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/signal?view=msvc-170
+// https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/raise?view=msvc-170
+
 /*
 Написать программу, обрабатывающую получение сигналов (SIGABRT, SIGFPE, SIGILL, SIGINT, SIGSEGV, SIGTERM). 
 Также программа, может возбуждать эти сигналы по указанию пользователя. 
