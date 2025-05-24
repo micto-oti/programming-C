@@ -69,7 +69,10 @@ int main() {
             raise(SIGABRT);
             break;
         case 2: {
-            raise(SIGFPE);
+            int a = 10, b = 0;
+            printf("Попытка выполнить деление на ноль: %d / %d\n", a, b);
+            int result = a / b;
+            // raise(SIGFPE);
             break;
         }
         case 3:
