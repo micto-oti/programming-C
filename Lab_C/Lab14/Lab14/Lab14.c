@@ -8,6 +8,7 @@
 // https://en.wikipedia.org/wiki/Fibonacci_number
 // https://www.geeksforgeeks.org/fibonacci-series-2/
 // https://metanit.com/c/tutorial/2.3.php
+// https://habr.com/ru/articles/768288/
 
 /*
 Написать программу с использованием нелокального перехода setjmp/longjmp, 
