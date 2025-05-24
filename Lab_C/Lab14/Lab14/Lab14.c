@@ -6,6 +6,7 @@
 // https://metanit.com/c/tutorial/10.2.php
 // https://en.wikipedia.org/wiki/Fibonacci_number
 // https://www.geeksforgeeks.org/fibonacci-series-2/
+// https://metanit.com/c/tutorial/2.3.php
 
 /*
 Написать программу с использованием нелокального перехода setjmp/longjmp, 
@@ -13,7 +14,7 @@
 в качестве механизма возврата из вложенных вызовов использовать нелокальный переход.
 */
 
-void fib_sum(jmp_buf n, int* count, int lim, int* sum, int a, int b) {
+void fib_sum(jmp_buf n, int* count, int lim, long long* sum, int a, int b) {
     if (*count >= lim) {
         longjmp(n, 1);
     }
@@ -26,18 +27,18 @@ void fib_sum(jmp_buf n, int* count, int lim, int* sum, int a, int b) {
 }
 
 int main() {
-    jmp_buf buffer;
+    jmp_buf check;
     int count = 0;
     int lim = 0;
-    int sum = 0;
+    long long sum = 0;
 
     printf("Введите количество чисел Фибоначчи: ");
     scanf("%d", &lim);
 
-    int checkpoint = setjmp(buffer);
+    int checkpoint = setjmp(check);
     
     if (checkpoint == 0) {
-        fib_sum(buffer, &count, lim, &sum, 1, 1);
+        fib_sum(check, &count, lim, &sum, 1, 1);
     }
     else {
         printf("Сумма первых %d чисел Фибоначчи: %d\n", lim, sum);
