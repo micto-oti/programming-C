@@ -70,7 +70,7 @@ int main() {
             break;
         case 2: {
             int a = 10, b = 0;
-            printf("Попытка выполнить деление на ноль: %d / %d\n", a, b);
+            printf("деление на ноль: %d / %d\n", a, b);
             int result = a / b;
             // raise(SIGFPE);
             break;
