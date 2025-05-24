@@ -13,16 +13,16 @@
 в качестве механизма возврата из вложенных вызовов использовать нелокальный переход.
 */
 
-void fib_sum(jmp_buf env, int* count, int limit, int* sum, int a, int b) {
-    if (*count >= limit) {
-        longjmp(env, 1);
+void fib_sum(jmp_buf n, int* count, int lim, int* sum, int a, int b) {
+    if (*count >= lim) {
+        longjmp(n, 1);
     }
 
     (*count)++;
     *sum += a;
 
     // Следующий член ряда: b, a + b
-    fib_sum(env, count, limit, sum, b, a + b);
+    fib_sum(n, count, lim, sum, b, a + b);
 }
 
 int main() {
