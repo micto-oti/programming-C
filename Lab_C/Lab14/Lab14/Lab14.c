@@ -24,8 +24,6 @@ void fib_sum(jmp_buf n, int* count, int lim, unsigned long long *sum, int a, int
     (*count)++;
     *sum += a;
     
-
-    // Следующий член ряда: b, a + b
     fib_sum(n, count, lim, sum, b, a + b);
 }
 
