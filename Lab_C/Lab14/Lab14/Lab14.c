@@ -23,6 +23,7 @@ void fib_sum(jmp_buf n, int* count, int lim, unsigned long long *sum, int a, int
 
     (*count)++;
     *sum += a;
+    
 
     // Следующий член ряда: b, a + b
     fib_sum(n, count, lim, sum, b, a + b);
@@ -43,7 +44,7 @@ int main() {
         fib_sum(check, &count, lim, &sum, 1, 1);
     }
     else {
-        printf("Сумма первых %d чисел Фибоначчи: %d\n", lim, sum);
+        printf("Сумма первых %d чисел Фибоначчи: %llu\n", lim, sum);
     }
 
     return 0;

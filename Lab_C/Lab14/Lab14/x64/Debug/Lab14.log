@@ -1,10 +1,2 @@
 ﻿  Lab14.c
-E:\projects\github\programming-C\Lab_C\Lab14\Lab14\Lab14.c(46,16): warning C4477: "printf": в строке форматирования "%d" требуется аргумент типа "int", но вариативный аргумент "2" имеет тип "unsigned __int64"
-      E:\projects\github\programming-C\Lab_C\Lab14\Lab14\Lab14.c(46,16):
-      рекомендуется использовать "%lld" в строке форматирования
-      E:\projects\github\programming-C\Lab_C\Lab14\Lab14\Lab14.c(46,16):
-      рекомендуется использовать "%Id" в строке форматирования
-      E:\projects\github\programming-C\Lab_C\Lab14\Lab14\Lab14.c(46,16):
-      рекомендуется использовать "%I64d" в строке форматирования
-  
   Lab14.vcxproj -> E:\projects\github\programming-C\Lab_C\Lab14\x64\Debug\Lab14.exe
