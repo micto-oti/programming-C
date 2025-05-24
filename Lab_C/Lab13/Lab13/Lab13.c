@@ -37,7 +37,7 @@ void sig_handler(int sig) {
     exit(sig);
 }
 
-void sig_hand() {
+void sigs() {
     signal(SIGABRT, sig_handler);
     signal(SIGFPE, sig_handler);
     signal(SIGILL, sig_handler);
@@ -57,7 +57,7 @@ void print_menu() {
 }
 
 int main() {
-    sig_hand();
+    sigs();
 
     int ch;
     while (1) {
