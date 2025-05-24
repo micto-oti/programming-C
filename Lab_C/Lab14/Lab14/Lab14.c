@@ -1,6 +1,7 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <setjmp.h>
+#include <limits.h>
 
 /* Использованные ссылки */
 // https://metanit.com/c/tutorial/10.2.php
