@@ -16,7 +16,7 @@
 в качестве механизма возврата из вложенных вызовов использовать нелокальный переход.
 */
 
-void fib_sum(jmp_buf n, int* count, int lim, long long *sum, int a, int b) {
+void fib_sum(jmp_buf n, int* count, int lim, unsigned long long *sum, int a, int b) {
     if (*count >= lim) {
         longjmp(n, 1);
     }
@@ -32,7 +32,7 @@ int main() {
     jmp_buf check;
     int count = 0;
     int lim = 0;
-    long long sum = 0;
+    unsigned long long sum = 0;
 
     printf("Введите количество чисел Фибоначчи: ");
     scanf("%d", &lim);
