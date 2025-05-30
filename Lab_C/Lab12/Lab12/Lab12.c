@@ -41,7 +41,7 @@ void get_current(int* year, int* month, int* day) {
 
 int main() {
     char input[100];
-    printf("Введите дату \nформат: \nгггг.мм.дд \nгггг.мм \nгггг \nnow): ");
+    printf("Введите дату \nформат: \n  гггг.мм.дд \n  гггг.мм \n  гггг \n  now\n> ");
     scanf("%99s", input);
 
     int year, month, day;
@@ -100,7 +100,7 @@ int main() {
 
     }
     else {
-        printf("Неверный формат. Используй: гггг.мм.дд / гггг.мм / гггг / now\n");
+        printf("Неверный формат. Используй: гггг.мм.дд | гггг.мм | гггг | now\n");
     }
 
     return 0;
