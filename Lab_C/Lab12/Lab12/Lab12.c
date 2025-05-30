@@ -5,7 +5,11 @@
 #include <windows.h>
 
 /* Ссылки */
-//
+// https://learn.microsoft.com/en-us/windows/win32/sysinfo/time-functions
+// https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime
+// https://stackoverflow.com/questions/6054016/c-program-to-find-day-of-week-given-date
+// https://www.fresh2refresh.com/c-programming/c-time-related-functions/
+// https://www.geeksforgeeks.org/c-program-to-print-number-of-days-in-a-month/
 
 
 // Получить день недели (0 = воскресенье ... 6 = суббота)
