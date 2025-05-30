@@ -53,7 +53,7 @@ int main() {
         printf("Текущая дата: %04d.%02d.%02d - %s\n", year, month, day, days[dow]);
 
     }
-    else if (sscanf(input, "%d.%d.%d", &year, &month, &day) == 3) {
+    else if (sscanf(input, "%s.%s.%s", &year, &month, &day) == 3) {
         int dow = get_week(year, month, day);
         char* days[] = { "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" };
         printf("Дата: %04d.%02d.%02d - %s\n", year, month, day, days[dow]);
