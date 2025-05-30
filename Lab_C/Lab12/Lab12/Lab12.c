@@ -1,7 +1,12 @@
-﻿#include <stdio.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include <string.h>
 #include <time.h>
 #include <windows.h>
+
+/* Ссылки */
+//
+
 
 // Получить день недели (0 = воскресенье ... 6 = суббота)
 int get_week(int year, int month, int day) {
@@ -42,14 +47,14 @@ int main() {
     int year, month, day;
 
     if (strcmp(input, "now") == 0) {
-        get_current_date(&year, &month, &day);
-        int dow = get_day_of_week(year, month, day);
+        get_current(&year, &month, &day);
+        int dow = get_week(year, month, day);
         char* days[] = { "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" };
         printf("Текущая дата: %04d.%02d.%02d - %s\n", year, month, day, days[dow]);
 
     }
     else if (sscanf(input, "%d.%d.%d", &year, &month, &day) == 3) {
-        int dow = get_day_of_week(year, month, day);
+        int dow = get_week(year, month, day);
         char* days[] = { "Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота" };
         printf("Дата: %04d.%02d.%02d - %s\n", year, month, day, days[dow]);
 
