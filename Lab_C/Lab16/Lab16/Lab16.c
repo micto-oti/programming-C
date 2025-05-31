@@ -42,17 +42,12 @@ int main() {
         unsigned char bytes[sizeof(double)];
     } d_un;
 
-    /*printf("Введите число типа long: ");
-    if (scanf("%ld", &l_un.l) != 1) {
-        printf("Ошибка ввода для long\n");
-        return 1;
-    }*/
+    printf("Введите число типа long: ");
+    scanf("%ld", &l_un.l);
 
     printf("Введите число типа long и double: ");
-    if (scanf("%lf", &d_un.d) != 1 || scanf("%ld", &l_un.l) != 1) {
-        printf("Ошибка ввода\n");
-        return 1;
-    }
+    scanf("%lf", &d_un.d);
+    
     
     int bits_i = c_bits(&l_un.bytes, sizeof(l_un.bytes));
     int bits_f = c_bits(&d_un.bytes, sizeof(d_un.bytes));
