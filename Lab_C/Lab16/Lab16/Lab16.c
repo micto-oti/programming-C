@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <stdint.h>
 
+/* 
+Написать программу подсчитывающая количество битов, выставленных в единицу у числа типа long и double. 
+Сами значения чисел вводятся с клавиатуры.
+*/
+
+
 /* Ссылки */
 // https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/
 // https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
@@ -33,14 +39,14 @@ int main() {
     
     union {
         double d;
-        unsigned char bytes[sizeof(double)]
+        unsigned char bytes[sizeof(double)];
     } d_un;
 
-    printf("Введите число типа long: ");
+    /*printf("Введите число типа long: ");
     if (scanf("%ld", &l_un.l) != 1) {
         printf("Ошибка ввода для long\n");
         return 1;
-    }
+    }*/
 
     printf("Введите число типа double: ");
     if (scanf("%lf", &d_un.d) != 1 || scanf("%ld", &l_un.l) != 1) {
@@ -48,35 +54,11 @@ int main() {
         return 1;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*long lnum;
-    double dnum;
+    int bits_i = c_bits(&l_un.bytes, sizeof(l_un.bytes));
+    int bits_f = c_bits(&d_un.bytes, sizeof(d_un.bytes));
 
-    printf("Введите число типа long: ");
-    if (scanf("%ld", &lnum) != 1) {
-        printf("Ошибка ввода для long\n");
-        return 1;
-    }
+    printf("Количество битов long: %d\n", bits_i);
+    printf("Количество битов double: %d\n", bits_f);
 
-    printf("Введите число типа double: ");
-    if (scanf("%lf", &dnum) != 1) {
-        printf("Ошибка ввода для double\n");
-        return 1;
-    }
-
-    int bits_i = c_bits(&lnum, sizeof(lnum));
-    int bits_f = c_bits(&dnum, sizeof(dnum));
-
-    printf("Количество битов, выставленных в 1 у long: %d\n", bits_i);
-    printf("Количество битов, выставленных в 1 у double: %d\n", bits_f);
-
-    return 0;*/
+    return 0;
 }
