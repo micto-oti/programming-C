@@ -48,7 +48,7 @@ int main() {
         return 1;
     }*/
 
-    printf("Введите число типа double: ");
+    printf("Введите число типа long и double: ");
     if (scanf("%lf", &d_un.d) != 1 || scanf("%ld", &l_un.l) != 1) {
         printf("Ошибка ввода\n");
         return 1;
