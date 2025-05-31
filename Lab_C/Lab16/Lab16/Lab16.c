@@ -11,7 +11,7 @@
 /* Ссылки */
 // https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/
 // https://www.geeksforgeeks.org/count-set-bits-in-an-integer/
-// 
+// https://metanit.com/c/tutorial/6.6.php
 
 // Функция подсчёта битов, выставленных в 1, для любого блока памяти
 int bits(unsigned char byte) {
@@ -29,17 +29,6 @@ int c_bits(const unsigned char *bytes, size_t size) {
         total += bits(bytes[i]);
     }
     return total;
-}
-
-void bin(const unsigned char* bytes, size_t size) {
-    for (int i = (int)size - 1; i >= 0; i--) {
-        for (int bit = 7; bit >= 0; bit--) {
-            putchar((bytes[i] >> bit) & 1 ? '1' : '0');
-        }
-        putchar(' ');
-    }
-    putchar('\n');
-
 }
 
 int main() {
@@ -67,11 +56,6 @@ int main() {
     printf("Количество битов long: %d\n", bits_i);
     printf("Количество битов double: %d\n", bits_f);
 
-    printf("\n");
-    printf("long:");
-    bin(l_un.bytes, sizeof(l_un.bytes));
-    printf("double:");
-    bin(d_un.bytes, sizeof(d_un.bytes));
 
     return 0;
 }
