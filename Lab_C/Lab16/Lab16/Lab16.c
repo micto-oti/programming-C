@@ -53,10 +53,10 @@ int main() {
         unsigned char bytes[sizeof(double)];
     } d_un;
 
-    printf("Введите число типа long: ");
+    printf("Введите long: ");
     scanf("%ld", &l_un.l);
 
-    printf("Введите число типа long и double: ");
+    printf("Введите double: ");
     scanf("%lf", &d_un.d);
     
     
@@ -65,6 +65,12 @@ int main() {
 
     printf("Количество битов long: %d\n", bits_i);
     printf("Количество битов double: %d\n", bits_f);
+
+    printf("\n");
+    printf("long:");
+    bin(l_un.bytes, sizeof(l_un.bytes));
+    printf("double:");
+    bin(d_un.bytes, sizeof(d_un.bytes));
 
     return 0;
 }
