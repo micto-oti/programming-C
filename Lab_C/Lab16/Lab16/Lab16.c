@@ -33,9 +33,20 @@ int main() {
     
     union {
         double d;
-        unsigned char bytes[sizeof(long)]
+        unsigned char bytes[sizeof(double)]
     } d_un;
-    
+
+    printf("Введите число типа long: ");
+    if (scanf("%ld", &l_un.l) != 1) {
+        printf("Ошибка ввода для long\n");
+        return 1;
+    }
+
+    printf("Введите число типа double: ");
+    if (scanf("%lf", &d_un.d) != 1 || scanf("%ld", &l_un.l) != 1) {
+        printf("Ошибка ввода\n");
+        return 1;
+    }
     
     
     
