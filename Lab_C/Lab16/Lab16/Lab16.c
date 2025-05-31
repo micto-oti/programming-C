@@ -8,7 +8,7 @@
 // 
 
 // Функция подсчёта битов, выставленных в 1, для любого блока памяти
-int count_set_bits(const void* ptr, size_t size) {
+int c_bits(const void* ptr, size_t size) {
     int count = 0;
     const unsigned char* bytes = (const unsigned char*)ptr;
     for (size_t i = 0; i < size; i++) {
@@ -38,11 +38,11 @@ int main() {
         return 1;
     }
 
-    int bits_in_long = count_set_bits(&lnum, sizeof(lnum));
-    int bits_in_double = count_set_bits(&dnum, sizeof(dnum));
+    int bits_i = c_bits(&lnum, sizeof(lnum));
+    int bits_f = c_bits(&dnum, sizeof(dnum));
 
-    printf("Количество битов, выставленных в 1 у long: %d\n", bits_in_long);
-    printf("Количество битов, выставленных в 1 у double: %d\n", bits_in_double);
+    printf("Количество битов, выставленных в 1 у long: %d\n", bits_i);
+    printf("Количество битов, выставленных в 1 у double: %d\n", bits_f);
 
     return 0;
 }
