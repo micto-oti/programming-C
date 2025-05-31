@@ -59,6 +59,7 @@ int main() {
     printf("Введите double: ");
     scanf("%lf", &d_un.d);
     
+    printf("\n");
     
     int bits_i = c_bits(&l_un.bytes, sizeof(l_un.bytes));
     int bits_f = c_bits(&d_un.bytes, sizeof(d_un.bytes));
