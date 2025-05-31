@@ -8,22 +8,45 @@
 // 
 
 // Функция подсчёта битов, выставленных в 1, для любого блока памяти
-int c_bits(const void* ptr, size_t size) {
+int bits(unsigned char byte) {
     int count = 0;
-    const unsigned char* bytes = (const unsigned char*)ptr;
-    for (size_t i = 0; i < size; i++) {
-        unsigned char byte = bytes[i];
-        // Подсчёт битов в байте
-        for (int bit = 0; bit < 8; bit++) {
-            if (byte & (1 << bit))
-                count++;
-        }
+    while (byte) {
+        count += byte & 1;
+        byte >>= 1;
     }
     return count;
 }
 
+int c_bits(const unsigned char *bytes, size_t size) {
+    int total = 0;
+    for (size_t i = 0; i < size; i++) {
+        total += bits(bytes[i]);
+    }
+    return total;
+}
+
 int main() {
-    long lnum;
+    union {
+        long l;
+        unsigned char bytes[sizeof(long)];
+    } l_un;
+    
+    union {
+        double d;
+        unsigned char bytes[sizeof(long)]
+    } d_un;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*long lnum;
     double dnum;
 
     printf("Введите число типа long: ");
@@ -44,5 +67,5 @@ int main() {
     printf("Количество битов, выставленных в 1 у long: %d\n", bits_i);
     printf("Количество битов, выставленных в 1 у double: %d\n", bits_f);
 
-    return 0;
+    return 0;*/
 }
