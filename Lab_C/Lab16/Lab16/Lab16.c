@@ -31,6 +31,17 @@ int c_bits(const unsigned char *bytes, size_t size) {
     return total;
 }
 
+void bin(const unsigned char* bytes, size_t size) {
+    for (int i = (int)size - 1; i >= 0; i--) {
+        for (int bit = 7; bit >= 0; bit--) {
+            putchar((bytes[i] >> bit) & 1 ? '1' : '0');
+        }
+        putchar(' ');
+    }
+    putchar('\n');
+
+}
+
 int main() {
     union {
         long l;
