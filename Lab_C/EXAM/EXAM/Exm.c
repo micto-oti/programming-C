@@ -37,7 +37,7 @@ int main() {
 	
     /* #1 */
 
-    //clock_t start = clock();
+    clock_t start = clock();
 
     FILE* inp = fopen("input.txt", "w");
     int i = 0;
@@ -109,10 +109,11 @@ int main() {
         }
     }
 
-    /*int matrix;
-    
+    /*
+    int matrix;
     matrix = mx(N, arr);
-    int r = floor(sqrt(N)); */
+    int r = floor(sqrt(N)); 
+    */
 
     /* #6 */
     int sum = 0;
@@ -151,6 +152,10 @@ int main() {
 
 
 
+
+
+    clock_t end = clock();
+    double time = ((double)(end - start)) / CLOCKS_PER_SEC;
     return 0;
 
 }
