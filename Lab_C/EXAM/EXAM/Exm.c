@@ -67,11 +67,11 @@ int main() {
     inp = fopen("input.txt", "r");
     FILE* N_F = fopen("output.txt", "w");
 
-    char line[256];
+    char st[256];
 
     for (i = 0; i < N; i++) {
-        fgets(line, 256, inp);
-        arr[i] = atoi(line);
+        fgets(st, 256, inp);
+        arr[i] = atoi(st);
     }
 
     for (i = 0; i < N; i++) {
@@ -131,36 +131,6 @@ int main() {
         printf("\n");
     }
     printf("Сумма элементов матрицы: %d\n\n", sum);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
