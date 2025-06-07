@@ -36,7 +36,6 @@ int **mx(int n, int *arr) {
 int main() {
 	
     /* #1 */
-
     clock_t start = clock();
 
     FILE* inp = fopen("input.txt", "w");
@@ -57,13 +56,11 @@ int main() {
 
 
     /* #2 */
-    
     fclose(inp);
     free(arr);
 
 
     /* #3 */
-    
     inp = fopen("input.txt", "r");
     FILE* N_F = fopen("output.txt", "w");
 
@@ -90,37 +87,18 @@ int main() {
         }
     }
 
-
-    /* #5 */
-    /*int** matrix;
-    int r = floor(sqrt(N));
-
-    matrix = (int**)malloc(r * sizeof(int*));
-    for (int i = 0; i < r; i++) {
-        matrix[i] = (int*)malloc(r * sizeof(int));
-    }
-
-    int k = 0;
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < r; j++) {
-            if (k < N) {
-                matrix[i][j] = arr[k++];
-            }
-        }
-    }*/
-
     /* #5 */
     int **matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
 
     /* #6 */
-    /*int sum = 0;
+    int sum = 0;
     for (i = 0; i < r; i++) {
         for (j = 0; j < r; j++) {
             sum += matrix[i][j];
         }
-    }*/
+    }
 
 
     for (i = 0; i < r; i++) {
@@ -129,7 +107,8 @@ int main() {
         }
         printf("\n");
     }
-    printf("Сумма элементов матрицы: \n\n");
+    printf("Сумма элементов матрицы: %d\n\n", sum);
+
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
