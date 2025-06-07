@@ -89,6 +89,7 @@ int main() {
     //        fprintf(N_F, "пять\n");
     //    }
     //}
+    printf("#4");
 
 
 
@@ -97,6 +98,8 @@ int main() {
     int **matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
+
+    printf("#5");
 
 
 
@@ -125,12 +128,12 @@ int main() {
     }
     free(matrix);
 
-
+    printf("#6");
 
     /* #7 */
-    clock_t end = clock();
+    /*clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("время выполнения: %f", time);
+    printf("время выполнения: %f", time);*/
 
     return 0;
 }
