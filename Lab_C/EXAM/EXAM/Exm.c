@@ -68,7 +68,7 @@ int main() {
 
     /* #3 */
     inp = fopen("input.txt", "r");
-    //FILE* N_F = fopen("output.txt", "w");
+    FILE* N_F = fopen("output.txt", "w");
 
     char st[256];
 
@@ -78,7 +78,7 @@ int main() {
     }
 
 
-    for (i = 0; i < N; i++) {
+    for (i = 0; i < N-1; i++) {
         if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
             fprintf(N_F, "пятьсемь\n");
         }
