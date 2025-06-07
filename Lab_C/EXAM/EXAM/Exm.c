@@ -5,6 +5,8 @@
 #include <math.h>
 
 
+
+/* #5 */
 int **mx(int n, int *arr) {
     int** matrix;
 
@@ -77,10 +79,7 @@ int main() {
     }
 
     for (i = 0; i < N; i++) {
-        if (arr[i] == 0) {
-
-        }
-        else if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
+        if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
             fprintf(N_F, "пятьсемь\n");
         }
         else if (arr[i] % 7 == 0) // #3
