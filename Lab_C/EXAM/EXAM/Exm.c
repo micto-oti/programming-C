@@ -67,15 +67,16 @@ int main() {
 
 
     /* #3 */
-    /*inp = fopen("input.txt", "r");
-    FILE* N_F = fopen("output.txt", "w");
+    inp = fopen("input.txt", "r");
+    //FILE* N_F = fopen("output.txt", "w");
 
     char st[256];
 
     for (i = 0; i < N; i++) {
         fgets(st, sizeof(st), inp);
         arr[i] = atoi(st);
-    }*/
+    }
+
 
     //for (i = 0; i < N; i++) {
     //    if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
@@ -89,23 +90,23 @@ int main() {
     //        fprintf(N_F, "пять\n");
     //    }
     //}
-    //printf("#4");
+    printf("#3 #4");
 
 
 
 
     /* #5 */
-    /*int **matrix;
+    int **matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
 
-    printf("#5");*/
+    printf("#5");
 
 
 
 
     /* #6 */
-    /*int sum = 0;
+    int sum = 0;
     for (i = 0; i < r; i++) {
         for (j = 0; j < r; j++) {
             sum += matrix[i][j];
@@ -128,12 +129,12 @@ int main() {
     }
     free(matrix);
 
-    printf("#6");*/
+    printf("#6");
 
     /* #7 */
-    /*clock_t end = clock();
+    clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
-    printf("время выполнения: %f", time);*/
+    printf("время выполнения: %f", time);
 
     return 0;
 }
