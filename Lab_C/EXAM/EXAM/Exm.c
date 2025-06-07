@@ -26,6 +26,8 @@ int mx(int n, int *arr) {
             }
         }
     }
+
+    return matrix;
 }
 
 
@@ -60,9 +62,6 @@ int main() {
     free(arr);
 
 
-
-
-
     /* #3 */
     
     inp = fopen("input.txt", "r");
@@ -93,10 +92,20 @@ int main() {
 
 
     /* #5 */
-    mx(N, arr);
+    int** matrix;
+    
+    matrix = mx(N, arr);
 
+    int r = floor(sqrt(N));
 
-
+    /* #6 */
+    int sum = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < r; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    printf("Сумма строк и столбцов матрицы: %d\n\n", sum);
 
 
 
