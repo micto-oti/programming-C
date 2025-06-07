@@ -92,7 +92,7 @@ int main() {
 
 
     /* #5 */
-    int** matrix;
+    /*int** matrix;
     int r = floor(sqrt(N));
 
     matrix = (int**)malloc(r * sizeof(int*));
@@ -107,20 +107,20 @@ int main() {
                 matrix[i][j] = arr[k++];
             }
         }
-    }
+    }*/
 
-    
-    int matrix;
+    /* #5 */
+    int **matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
 
     /* #6 */
-    int sum = 0;
+    /*int sum = 0;
     for (i = 0; i < r; i++) {
         for (j = 0; j < r; j++) {
             sum += matrix[i][j];
         }
-    }
+    }*/
 
 
     for (i = 0; i < r; i++) {
