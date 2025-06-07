@@ -27,7 +27,7 @@ int mx(int n, int *arr) {
         }
     }
 
-    return matrix;
+    return **matrix;
 }
 
 
@@ -92,7 +92,7 @@ int main() {
 
 
     /* #5 */
-    int** matrix;
+    int matrix;
     
     matrix = mx(N, arr);
 
