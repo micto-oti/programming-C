@@ -123,9 +123,9 @@ int main() {
     }*/
 
 
-    for (i = 0; i < 2; i++) {
-        for (j = 0; j < 2; j++) {
-            printf("%l ", matrix[i][j]);
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < r; j++) {
+            printf("%d ", matrix[i][j]);
         }
         printf("\n");
     }
