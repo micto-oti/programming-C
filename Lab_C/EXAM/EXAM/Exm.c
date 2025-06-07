@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 
 int main() {
 	
@@ -64,5 +65,27 @@ int main() {
     }
 
 
+    /* #5 */
+
+    int **matrix;
+
+
+    int r = floor(sqrt(N));
+
+    matrix = (int**)malloc(r * sizeof(int*));
+    for (int i = 0; i < r; i++)
+    {
+        matrix[i] = (int*)malloc(r * sizeof(int));
+    }
+
+
+    int k = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < r; j++) {
+            if (k < N) {
+                matrix[i][j] = arr[k++];
+            }
+        }
+    }
 
 }
