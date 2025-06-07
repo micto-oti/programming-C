@@ -51,18 +51,18 @@ int main() {
         if (arr[i] == 0) {
 
         }
-        else if (arr[i] % 7 == 0)
-        {
-            fprintf(N_F, "семь\n");
-        }
-        else if (arr[i] % 5 == 0) {
-            fprintf(N_F, "пять\n");
-        }
-        /* #4 */
-        else if (arr[i] % 5 == 0 || arr[i] % 7 == 0) {
+        else if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
             fprintf(N_F, "пятьсемь\n");
         }
+        else if (arr[i] % 7 == 0) // #3
+        {
+            fprintf(N_F, "семь\n"); // #3
+        }
+        else if (arr[i] % 5 == 0) { // #3
+            fprintf(N_F, "пять\n");
+        }
     }
+
 
 
 }
