@@ -74,7 +74,7 @@ int main() {
     char st[256];
 
     for (i = 0; i < N; i++) {
-        fgets(st, 256, inp);
+        fgets(st, sizeof(st), inp);
         arr[i] = atoi(st);
     }
 
