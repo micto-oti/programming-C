@@ -5,30 +5,30 @@
 #include <math.h>
 
 
-int mx(int n, int *arr) {
-    int** matrix;
-
-
-    int r = floor(sqrt(n));
-
-    matrix = (int**)malloc(r * sizeof(int*));
-    for (int i = 0; i < r; i++)
-    {
-        matrix[i] = (int*)malloc(r * sizeof(int));
-    }
-
-
-    int k = 0;
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < r; j++) {
-            if (k < n) {
-                matrix[i][j] = arr[k++];
-            }
-        }
-    }
-
-    return **matrix;
-}
+//int mx(int n, int *arr) {
+//    int** matrix;
+//
+//
+//    int r = floor(sqrt(n));
+//
+//    matrix = (int**)malloc(r * sizeof(int*));
+//    for (int i = 0; i < r; i++)
+//    {
+//        matrix[i] = (int*)malloc(r * sizeof(int));
+//    }
+//
+//
+//    int k = 0;
+//    for (int i = 0; i < r; i++) {
+//        for (int j = 0; j < r; j++) {
+//            if (k < n) {
+//                matrix[i][j] = arr[k++];
+//            }
+//        }
+//    }
+//
+//    return **matrix;
+//}
 
 
 
@@ -52,7 +52,7 @@ int main() {
 
     
     for (i = 0; i < N; i++) {
-        fprintf(inp, "%d\n", rand() % 10); // случайное число
+        fprintf(inp, "%d\n", rand() % 100); // случайное число
     }
 
 
@@ -92,11 +92,27 @@ int main() {
 
 
     /* #5 */
-    int matrix;
+    int** matrix;
+    int r = floor(sqrt(N));
+
+    matrix = (int**)malloc(r * sizeof(int*));
+    for (int i = 0; i < r; i++) {
+        matrix[i] = (int*)malloc(r * sizeof(int));
+    }
+
+    int k = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < r; j++) {
+            if (k < N) {
+                matrix[i][j] = arr[k++];
+            }
+        }
+    }
+
+    /*int matrix;
     
     matrix = mx(N, arr);
-
-    int r = floor(sqrt(N));
+    int r = floor(sqrt(N)); */
 
     /* #6 */
     int sum = 0;
