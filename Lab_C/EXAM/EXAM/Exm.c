@@ -67,7 +67,7 @@ int main() {
 
 
     /* #3 */
-    inp = fopen("input.txt", "r");
+    /*inp = fopen("input.txt", "r");
     FILE* N_F = fopen("output.txt", "w");
 
     char st[256];
@@ -75,7 +75,7 @@ int main() {
     for (i = 0; i < N; i++) {
         fgets(st, sizeof(st), inp);
         arr[i] = atoi(st);
-    }
+    }*/
 
     //for (i = 0; i < N; i++) {
     //    if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
