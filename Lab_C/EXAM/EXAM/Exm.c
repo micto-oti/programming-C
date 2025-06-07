@@ -48,7 +48,6 @@ int main() {
 
     int* arr;
     arr = (int*)malloc(N * sizeof(int));
-
     
     for (i = 0; i < N; i++) {
         fprintf(inp, "%d\n", rand() % 100); // случайное число
@@ -109,10 +108,15 @@ int main() {
     }
     printf("Сумма элементов матрицы: %d\n\n", sum);
 
+
+
     for (j = 0; j < i; j++) {
         free(matrix[j]);
     }
     free(matrix);
+
+
+
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
