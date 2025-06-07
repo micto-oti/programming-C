@@ -5,30 +5,30 @@
 #include <math.h>
 
 
-//int mx(int n, int *arr) {
-//    int** matrix;
-//
-//
-//    int r = floor(sqrt(n));
-//
-//    matrix = (int**)malloc(r * sizeof(int*));
-//    for (int i = 0; i < r; i++)
-//    {
-//        matrix[i] = (int*)malloc(r * sizeof(int));
-//    }
-//
-//
-//    int k = 0;
-//    for (int i = 0; i < r; i++) {
-//        for (int j = 0; j < r; j++) {
-//            if (k < n) {
-//                matrix[i][j] = arr[k++];
-//            }
-//        }
-//    }
-//
-//    return **matrix;
-//}
+int mx(int n, int *arr) {
+    int** matrix;
+
+
+    int r = floor(sqrt(n));
+
+    matrix = (int**)malloc(r * sizeof(int*));
+    for (int i = 0; i < r; i++)
+    {
+        matrix[i] = (int*)malloc(r * sizeof(int));
+    }
+
+
+    int k = 0;
+    for (int i = 0; i < r; i++) {
+        for (int j = 0; j < r; j++) {
+            if (k < n) {
+                matrix[i][j] = arr[k++];
+            }
+        }
+    }
+
+    return matrix;
+}
 
 
 
@@ -109,11 +109,10 @@ int main() {
         }
     }
 
-    /*
+    
     int matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
-    */
 
     /* #6 */
     int sum = 0;
