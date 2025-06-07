@@ -10,7 +10,7 @@
 int **mx(int n, int *arr) {
     int** matrix;
 
-    int r = floor(sqrt(n-1));
+    int r = floor(sqrt(n));
 
     matrix = (int**)malloc(r * sizeof(int*));
     for (int i = 0; i < r; i++)
@@ -22,7 +22,7 @@ int **mx(int n, int *arr) {
     int k = 0;
     for (int i = 0; i < r; i++) {
         for (int j = 0; j < r; j++) {
-            if (k < n-1) {
+            if (k < n) {
                 matrix[i][j] = arr[k++];
             }
         }
