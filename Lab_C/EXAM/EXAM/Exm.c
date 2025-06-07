@@ -5,7 +5,7 @@
 #include <math.h>
 
 
-int mx(int n, int *arr) {
+int **mx(int n, int *arr) {
     int** matrix;
 
 
@@ -123,13 +123,13 @@ int main() {
     }*/
 
 
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < r; j++) {
-            printf("%d ", matrix[i][j]);
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%l ", matrix[i][j]);
         }
         printf("\n");
     }
-    printf("Сумма элементов матрицы: %d\n\n", sum);
+    printf("Сумма элементов матрицы: \n\n");
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
