@@ -77,18 +77,18 @@ int main() {
         arr[i] = atoi(st);
     }
 
-    //for (i = 0; i < N; i++) {
-    //    if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
-    //        fprintf(N_F, "пятьсемь\n");
-    //    }
-    //    else if (arr[i] % 7 == 0) // #3
-    //    {
-    //        fprintf(N_F, "семь\n"); // #3
-    //    }
-    //    else if (arr[i] % 5 == 0) { // #3
-    //        fprintf(N_F, "пять\n");
-    //    }
-    //}
+    for (i = 0; i < N; i++) {
+        if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
+            fprintf(N_F, "пятьсемь\n");
+        }
+        else if (arr[i] % 7 == 0) // #3
+        {
+            fprintf(N_F, "семь\n"); // #3
+        }
+        else if (arr[i] % 5 == 0) { // #3
+            fprintf(N_F, "пять\n");
+        }
+    }
     printf("#4");
 
 
@@ -123,7 +123,7 @@ int main() {
 
 
 
-    for (j = 0; j < i; j++) {
+    for (j = 0; j < r; j++) {
         free(matrix[j]);
     }
     free(matrix);
