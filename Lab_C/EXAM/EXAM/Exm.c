@@ -40,7 +40,7 @@ int main() {
     clock_t start = clock();
 
     FILE* inp = fopen("input.txt", "w");
-    int i = 0;
+    int i = 0, j = 0;
     int N;
 
 
@@ -101,8 +101,8 @@ int main() {
     }
 
     int k = 0;
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < r; j++) {
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < r; j++) {
             if (k < N) {
                 matrix[i][j] = arr[k++];
             }
@@ -117,10 +117,18 @@ int main() {
 
     /* #6 */
     int sum = 0;
-    for (int i = 0; i < r; i++) {
-        for (int j = 0; j < r; j++) {
+    for (i = 0; i < r; i++) {
+        for (j = 0; j < r; j++) {
             sum += matrix[i][j];
         }
+    }
+
+
+    for (i = 0; i < 2; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
     }
     printf("Сумма строк и столбцов матрицы: %d\n\n", sum);
 
