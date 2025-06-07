@@ -51,7 +51,7 @@ int main() {
     arr = (int*)malloc(N * sizeof(int));
     
     for (i = 0; i < N; i++) {
-        fprintf(inp, "%d\n", rand() % 100); // случайное число
+        fprintf(inp, "%d\n", rand()); // случайное число
     }
 
 
@@ -78,19 +78,19 @@ int main() {
     }
 
 
-    //for (i = 0; i < N; i++) {
-    //    if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
-    //        fprintf(N_F, "пятьсемь\n");
-    //    }
-    //    else if (arr[i] % 7 == 0) // #3
-    //    {
-    //        fprintf(N_F, "семь\n"); // #3
-    //    }
-    //    else if (arr[i] % 5 == 0) { // #3
-    //        fprintf(N_F, "пять\n");
-    //    }
-    //}
-    printf("#3 #4");
+    for (i = 0; i < N; i++) {
+        if (arr[i] % 5 == 0 || arr[i] % 7 == 0) { // #4 
+            fprintf(N_F, "пятьсемь\n");
+        }
+        else if (arr[i] % 7 == 0) // #3
+        {
+            fprintf(N_F, "семь\n"); // #3
+        }
+        else if (arr[i] % 5 == 0) { // #3
+            fprintf(N_F, "пять\n");
+        }
+    }
+    printf("#3 #4\n");
 
 
 
@@ -100,7 +100,7 @@ int main() {
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
 
-    printf("#5");
+    printf("#5\n");
 
 
 
@@ -129,7 +129,7 @@ int main() {
     }
     free(matrix);
 
-    printf("#6");
+    printf("#6\n");
 
     /* #7 */
     clock_t end = clock();
