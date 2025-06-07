@@ -156,6 +156,7 @@ int main() {
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
-    return 0;
+    printf("время выполнения: %f", time);
 
+    return 0;
 }
