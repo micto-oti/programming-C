@@ -54,9 +54,15 @@ int main() {
     }
 
 
+
+
+
     /* #2 */
     fclose(inp);
     free(arr);
+
+
+
 
 
     /* #3 */
@@ -86,10 +92,16 @@ int main() {
         }
     }
 
+
+
+
     /* #5 */
     int **matrix;
     matrix = mx(N, arr);
     int r = floor(sqrt(N)); 
+
+
+
 
     /* #6 */
     int sum = 0;
