@@ -178,28 +178,39 @@ int main() {
         }
     }
 
-    FILE* output_file = fopen("output.txt", "w");
-    if (output_file == NULL) {
+    FILE* matr = fopen("output.txt", "w");
+    if (matr == NULL) {
         printf("Не удалось открыть файл output.txt\n");
         free_mx(matrix1, r);
         free_mx(matrix2, r);
         return 1;
     }
 
-    fprintf(output_file, "Первая матрица (сумма: %d):\n", first);
-    write_matrix_to_file(output_file, matrix1, r);
-    fprintf(output_file, "Вторая матрица (сумма: %d):\n", second);
-    write_matrix_to_file(output_file, matrix2, r);
-    fclose(output_file);
+    fprintf(matr, "Первая матрица (сумма: %d):\n", first);
+    for (i = 0; i < r; i++) {
+        matrix1[i] = (int*)malloc(r * sizeof(int));
+        for (j = 0; j < r; j++) {
+            fscanf(matr, "%d", &matrix1[i][j]);
+        }
+    }
 
-    printf("Матрицы с одинаковой суммой (%d) записаны в файл output.txt\n", first);
+
+    fprintf(matr, "Вторая матрица (сумма: %d):\n", second);
+    for (i = 0; i < r; i++) {
+        matrix2[i] = (int*)malloc(r * sizeof(int));
+        for (j = 0; j < r; j++) {
+            fscanf(matr, "%d", &matrix2[i][j]);
+        }
+    }
+
+
+    fclose(matr);
+
+    printf("Матрицы с одинаковой суммой (%d) записаны в output.txt\n", first);
 
     // Освобождаем память
     free_mx(matrix1, r);
     free_mx(matrix2, r);
-
-
-
 
 
     clock_t end = clock();
