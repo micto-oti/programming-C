@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
+#include <bool.h>
 
 
 int** mx(int n, int* arr) {
@@ -106,6 +107,48 @@ int main() {
     int** matrix1 = mx(N, arr1);
 
 
+
+    int m;
+    printf("Введите размер матрицы m: ");
+    scanf("%d", &m);
+
+    int** first_matrix = NULL;
+    int** second_matrix = NULL;
+    int first_sum = -1;
+    int second_sum = -1;
+    bool found = false;
+
+    while (!found) {
+        // Создаем новую матрицу
+        int** matrix = create_matrix(m);
+        int sum = calculate_matrix_sum(matrix, m);
+
+        // Проверяем, совпадает ли сумма с предыдущими матрицами
+        if (first_matrix == NULL) {
+            first_matrix = matrix;
+            first_sum = sum;
+        }
+        else if (second_matrix == NULL) {
+            second_matrix = matrix;
+            second_sum = sum;
+            if (first_sum == second_sum) {
+                found = true;
+            }
+        }
+        else {
+            // Освобождаем память от предыдущей первой матрицы
+            free_matrix(first_matrix, m);
+            // Перемещаем вторую матрицу в первую
+            first_matrix = second_matrix;
+            first_sum = second_sum;
+            // Сохраняем новую матрицу как вторую
+            second_matrix = matrix;
+            second_sum = sum;
+            if (first_sum == second_sum) {
+                found = true;
+            }
+        }
+    }
 
 
 
