@@ -188,21 +188,19 @@ int main() {
 
     fprintf(matr, "Первая матрица (сумма: %d):\n", first);
     for (i = 0; i < r; i++) {
-        matrix1[i] = (int*)malloc(r * sizeof(int));
         for (j = 0; j < r; j++) {
-            fscanf(matr, "%d", &matrix1[i][j]);
+            fprintf(matr, "%d ", matrix1[i][j]); 
         }
+        fprintf(matr, "\n");
     }
-
 
     fprintf(matr, "Вторая матрица (сумма: %d):\n", second);
     for (i = 0; i < r; i++) {
-        matrix2[i] = (int*)malloc(r * sizeof(int));
         for (j = 0; j < r; j++) {
-            fscanf(matr, "%d", &matrix2[i][j]);
+            fprintf(matr, "%d ", matrix2[i][j]); 
         }
+        fprintf(matr, "\n");
     }
-
 
     fclose(matr);
 
