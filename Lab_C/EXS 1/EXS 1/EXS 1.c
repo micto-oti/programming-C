@@ -134,6 +134,8 @@ int main() {
     printf("Введите N: ");
     scanf("%d", &N);
 
+    int r = floor(sqrt(N));
+
     arr1 = (int*)malloc(N * sizeof(int));
 
 
@@ -153,10 +155,9 @@ int main() {
     bool found = false;
 
     while (!found) {
-        int** matrix = mx_cr(N);
-        int sum = mx_sum(matrix, N);
+        int** matrix = mx_cr(r);
+        int sum = mx_sum(matrix, r);
 
-        // Проверяем, совпадает ли сумма с предыдущими матрицами
         if (matrix1 == NULL) {
             matrix1 = matrix;
             second = sum;
@@ -169,15 +170,14 @@ int main() {
             }
         }
         else {
-            // Освобождаем память от предыдущей первой матрицы
-            free_mx(matrix1, N);
-            // Перемещаем вторую матрицу в первую
-            first_matrix = second_matrix;
-            first_sum = second_sum;
-            // Сохраняем новую матрицу как вторую
-            second_matrix = matrix;
-            second_sum = sum;
-            if (first_sum == second_sum) {
+            free_mx(matrix1, r);
+            
+            matrix1 = matrix2;
+            first = second;
+            
+            matrix2 = matrix;
+            second = sum;
+            if (first == second) {
                 found = true;
             }
         }
