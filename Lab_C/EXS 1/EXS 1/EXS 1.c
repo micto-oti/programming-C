@@ -15,17 +15,15 @@ void free_mx(int** matrix, int r) {
 }
 
 
-int** mx_cr(int n) {
-    int** matrix;
-
-    int r = floor(sqrt(n));
-
-    matrix = (int**)malloc(r * sizeof(int*));
-    for (int i = 0; i < r; i++)
-    {
-        matrix[i] = (int*)malloc(r * sizeof(int));
+int** mx_cr(int m) {
+    
+    int** matrix = (int**)malloc(m * sizeof(int*));
+    for (int i = 0; i < m; i++) {
+        matrix[i] = (int*)malloc(m * sizeof(int));
+        for (int j = 0; j < m; j++) {
+            matrix[i][j] = rand() % 10;
+        }
     }
-
     return matrix;
 }
 
@@ -152,14 +150,8 @@ int main() {
     bool found = false;
 
     while (!found) {
-
-
-
-
-
-
-
-        int sum = mx_sum(matrix1, r);
+        int** matrix = mx_cr(r);
+        int sum = mx_sum(matrix, r);
 
         if (matrix1 == NULL) {
             matrix1 = matrix;
