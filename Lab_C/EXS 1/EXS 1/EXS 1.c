@@ -54,6 +54,20 @@ int** mx(int n, int* arr) {
     return matrix;
 }
 
+int** mx_sum(int** matrix, int r) {
+    int i;
+    int sum = 0;
+
+    for (int m = 0; m < r; m++) {
+        for (int j = 0; j < i; j++) {
+            sum += matrix[m][j];
+        }
+    }
+
+    return sum;
+}
+
+
 
 
 int main() {
@@ -156,7 +170,7 @@ int main() {
         }
         else {
             // Освобождаем память от предыдущей первой матрицы
-            free_matrix(matrix1, m);
+            free_mx(matrix1, N);
             // Перемещаем вторую матрицу в первую
             first_matrix = second_matrix;
             first_sum = second_sum;
