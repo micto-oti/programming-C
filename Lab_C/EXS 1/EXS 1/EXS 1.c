@@ -25,6 +25,8 @@ int** mx_cr(int n) {
     {
         matrix[i] = (int*)malloc(r * sizeof(int));
     }
+
+    return matrix;
 }
 
 
