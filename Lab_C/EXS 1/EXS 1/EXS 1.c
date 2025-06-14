@@ -78,38 +78,38 @@ int main() {
         printf("Дата (%02d.%02d.%04d) прошла\n", day, month, year);
     }
 
-    int m;
+    int N;
     printf("Введите размер матрицы m: ");
-    scanf("%d", &m);
+    scanf("%d", &N);
 
     int** matrix1 = NULL;
     int** matrix2 = NULL;
-    int first_sum = -1;
-    int second_sum = -1;
+    int first = -1;
+    int second = -1;
     bool found = false;
 
     while (!found) {
-        int** matrix = mx_cr(m);
+        int** matrix = mx_cr(N);
         int sum = mx_sum(matrix, m);
 
         if (matrix1 == NULL) {
             matrix1 = matrix;
-            first_sum = sum;
+            first = sum;
         }
         else if (matrix2 == NULL) {
             matrix2 = matrix;
-            second_sum = sum;
-            if (first_sum == second_sum) {
+            second = sum;
+            if (first == second) {
                 found = true;
             }
         }
         else {
             free_mx(matrix1, m);
             matrix1 = matrix2;
-            first_sum = second_sum;
+            first = second;
             matrix2 = matrix;
-            second_sum = sum;
-            if (first_sum == second_sum) {
+            second = sum;
+            if (first == second) {
                 found = true;
             }
         }
@@ -123,7 +123,7 @@ int main() {
         return 1;
     }
 
-    fprintf(matr, "Первая матрица (сумма: %d):\n", first_sum);
+    fprintf(matr, "Первая матрица (сумма: %d):\n", first);
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
             fprintf(matr, "%d ", matrix1[i][j]);
@@ -131,7 +131,7 @@ int main() {
         fprintf(matr, "\n");
     }
 
-    fprintf(matr, "Вторая матрица (сумма: %d):\n", second_sum);
+    fprintf(matr, "Вторая матрица (сумма: %d):\n", second);
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < m; j++) {
             fprintf(matr, "%d ", matrix2[i][j]);
@@ -140,6 +140,7 @@ int main() {
     }
 
     fclose(matr);
+
     free_mx(matrix1, m);
     free_mx(matrix2, m);
 
