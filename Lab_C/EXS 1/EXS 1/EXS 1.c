@@ -122,13 +122,13 @@ int main() {
 
     int** matrix1 = mx(N, arr1);
     int** matrix2 = NULL;
-    int first = mx_sum(matrix1, r);
+    int first = mx_sum(matrix1, N);
     int second = -1;
     bool found = false;
 
     while (!found) {
         int** matrix = mx_cr(r);
-        int sum = mx_sum(matrix, r);
+        int sum = mx_sum(matrix, N);
 
         if (matrix2 == NULL) {
             matrix2 = matrix;
@@ -150,23 +150,23 @@ int main() {
     FILE* matr = fopen("output.txt", "w");
     if (matr == NULL) {
         printf("Не удалось открыть файл output.txt\n");
-        free_mx(matrix1, r);
-        free_mx(matrix2, r);
+        free_mx(matrix1, N);
+        free_mx(matrix2, N);
         free(arr1);
         return 1;
     }
 
     fprintf(matr, "Первая матрица (сумма: %d):\n", first);
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < r; j++) {
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
             fprintf(matr, "%d ", matrix1[i][j]);
         }
         fprintf(matr, "\n");
     }
 
     fprintf(matr, "Вторая матрица (сумма: %d):\n", second);
-    for (i = 0; i < r; i++) {
-        for (j = 0; j < r; j++) {
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
             fprintf(matr, "%d ", matrix2[i][j]);
         }
         fprintf(matr, "\n");
