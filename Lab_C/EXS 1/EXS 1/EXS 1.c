@@ -145,12 +145,7 @@ int main() {
         arr1[i] = rand() % 10;
     }
 
-    int** mxmatr = mx(N, arr1);
-
-
-
-
-    int** matrix1 = NULL;
+    int** matrix1 = mx(N, arr1);
     int** matrix2 = NULL;
     int first = -1;
     int second = -1;
