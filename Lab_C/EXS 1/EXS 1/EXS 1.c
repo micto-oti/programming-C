@@ -59,7 +59,7 @@ int** mx_sum(int** matrix, int r) {
     int sum = 0;
 
     for (int m = 0; m < r; m++) {
-        for (int j = 0; j < i; j++) {
+        for (int j = 0; j < r; j++) {
             sum += matrix[m][j];
         }
     }
@@ -188,5 +188,9 @@ int main() {
 
 
 
+
+    clock_t end = clock();
+    double time = ((double)(end - start)) / CLOCKS_PER_SEC;
+    printf("Время выполнения: %f", time);
     return 0;
 }
