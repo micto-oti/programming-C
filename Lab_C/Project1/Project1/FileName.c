@@ -1,5 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
@@ -86,7 +85,7 @@ int main() {
     }
 
     int day, month, year;
-    if (fscanf(input_file, "%d.%d.%d", &day, &month, &year) != 3) {
+    if (fscanf(input_file, "%d %d %d", &day, &month, &year) != 3) {
         printf("Ошибка чтения даты из файла\n");
         fclose(input_file);
         return 1;
