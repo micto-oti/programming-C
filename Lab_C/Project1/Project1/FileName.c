@@ -1,4 +1,5 @@
-﻿#include <stdio.h>
+﻿#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
@@ -143,3 +144,28 @@ int main() {
     // Записываем найденные матрицы в файл output.txt
     FILE* output_file = fopen("output.txt", "w");
     if (output_file == NULL) {
+        printf("Не удалось открыть файл output.txt\n");
+        free_matrix(first_matrix, m);
+        free_matrix(second_matrix, m);
+        return 1;
+    }
+
+    fprintf(output_file, "Первая матрица (сумма: %d):\n", first_sum);
+    write_matrix_to_file(output_file, first_matrix, m);
+    fprintf(output_file, "Вторая матрица (сумма: %d):\n", second_sum);
+    write_matrix_to_file(output_file, second_matrix, m);
+    fclose(output_file);
+
+    printf("Матрицы с одинаковой суммой (%d) записаны в файл output.txt\n", first_sum);
+
+    // Освобождаем память
+    free_matrix(first_matrix, m);
+    free_matrix(second_matrix, m);
+
+    // Задача 4: Замер времени работы программы
+    clock_t end_time = clock();
+    double time_spent = (double)(end_time - start_time) / CLOCKS_PER_SEC;
+    printf("Время работы программы: %.5f секунд\n", time_spent);
+
+    return 0;
+}
