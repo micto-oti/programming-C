@@ -54,7 +54,7 @@ int** mx(int n, int* arr) {
     return matrix;
 }
 
-int** mx_sum(int** matrix, int r) {
+int mx_sum(int** matrix, int r) {
     int i;
     int sum = 0;
 
