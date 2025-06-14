@@ -6,6 +6,15 @@
 #include <stdbool.h>
 
 
+
+void free_mx(int** matrix, int r) {
+    for (int j = 0; j < r; j++) {
+        free(matrix[j]);
+    }
+    free(matrix);
+}
+
+
 int** mx_cr(int n) {
     int** matrix;
 
