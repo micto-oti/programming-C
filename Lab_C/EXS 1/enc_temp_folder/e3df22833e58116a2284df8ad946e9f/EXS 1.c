@@ -152,17 +152,10 @@ int main() {
     bool found = false;
 
     while (!found) {
+        int** matrix = mx_cr(r);
+        int sum = mx_sum(matrix, r);
 
-
-
-
-
-
-
-        //int** matrix = mx_cr(r);
-        //int sum = mx_sum(matrix, r);
-
-        /*if (matrix1 == NULL) {
+        if (matrix1 == NULL) {
             matrix1 = matrix;
             second = sum;
         }
@@ -184,7 +177,7 @@ int main() {
             if (first == second) {
                 found = true;
             }
-        }*/
+        }
     }
 
 
