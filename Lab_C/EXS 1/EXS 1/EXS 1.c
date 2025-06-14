@@ -3,7 +3,21 @@
 #include <stdlib.h>
 #include <time.h>
 #include <math.h>
-#include <bool.h>
+#include <stdbool.h>
+
+
+int** mx_cr(int n) {
+    int** matrix;
+
+    int r = floor(sqrt(n));
+
+    matrix = (int**)malloc(r * sizeof(int*));
+    for (int i = 0; i < r; i++)
+    {
+        matrix[i] = (int*)malloc(r * sizeof(int));
+    }
+}
+
 
 
 int** mx(int n, int* arr) {
@@ -104,40 +118,36 @@ int main() {
         arr1[i] = rand() % 10;
     }
 
-    int** matrix1 = mx(N, arr1);
+    int** mxmatr = mx(N, arr1);
 
 
 
-    int m;
-    printf("Введите размер матрицы m: ");
-    scanf("%d", &m);
 
-    int** first_matrix = NULL;
-    int** second_matrix = NULL;
-    int first_sum = -1;
-    int second_sum = -1;
+    int** matrix1 = NULL;
+    int** matrix2 = NULL;
+    int first = -1;
+    int second = -1;
     bool found = false;
 
     while (!found) {
-        // Создаем новую матрицу
-        int** matrix = create_matrix(m);
-        int sum = calculate_matrix_sum(matrix, m);
+        int** matrix = mx_cr(N);
+        int sum = mx_sum(matrix, N);
 
         // Проверяем, совпадает ли сумма с предыдущими матрицами
-        if (first_matrix == NULL) {
-            first_matrix = matrix;
-            first_sum = sum;
+        if (matrix1 == NULL) {
+            matrix1 = matrix;
+            second = sum;
         }
-        else if (second_matrix == NULL) {
-            second_matrix = matrix;
-            second_sum = sum;
-            if (first_sum == second_sum) {
+        else if (second == NULL) {
+            matrix2 = matrix;
+            second = sum;
+            if (first == second) {
                 found = true;
             }
         }
         else {
             // Освобождаем память от предыдущей первой матрицы
-            free_matrix(first_matrix, m);
+            free_matrix(matrix1, m);
             // Перемещаем вторую матрицу в первую
             first_matrix = second_matrix;
             first_sum = second_sum;
