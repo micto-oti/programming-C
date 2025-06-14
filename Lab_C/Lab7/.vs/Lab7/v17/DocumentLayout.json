@@ -18,8 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ebe3f1d5-feac-4131-bf03-0e85ffb89a89}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{ebe3f1d5-feac-4131-bf03-0e85ffb89a89}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{ebe3f1d5-feac-4131-bf03-0e85ffb89a89}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -30,8 +42,7 @@
               "RelativeToolTip": "Lab7\\output.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAOwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-05-03T01:12:54.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T01:12:54.831Z"
             },
             {
               "$type": "Document",
@@ -41,7 +52,7 @@
               "RelativeDocumentMoniker": "Lab7\\Lab7.cpp",
               "ToolTip": "E:\\projects\\github\\programming-C\\Lab_C\\Lab7\\Lab7\\Lab7.cpp",
               "RelativeToolTip": "Lab7\\Lab7.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-02T14:18:18.85Z",
               "EditorCaption": ""

@@ -35,7 +35,7 @@ int **mx(int n, int *arr) {
 
 
 int main() {
-	
+    srand(time(NULL));
     /* #1 */
     clock_t start = clock();
 
