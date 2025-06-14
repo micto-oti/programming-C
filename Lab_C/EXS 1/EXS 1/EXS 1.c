@@ -90,7 +90,7 @@ int main() {
 
     while (!found) {
         int** matrix = mx_cr(N);
-        int sum = mx_sum(matrix, m);
+        int sum = mx_sum(matrix, N);
 
         if (matrix1 == NULL) {
             matrix1 = matrix;
@@ -104,7 +104,7 @@ int main() {
             }
         }
         else {
-            free_mx(matrix1, m);
+            free_mx(matrix1, N);
             matrix1 = matrix2;
             first = second;
             matrix2 = matrix;
@@ -118,31 +118,32 @@ int main() {
     FILE* matr = fopen("output.txt", "w");
     if (matr == NULL) {
         printf("Не удалось открыть файл output.txt\n");
-        free_mx(matrix1, m);
-        free_mx(matrix2, m);
+        free_mx(matrix1, N);
+        free_mx(matrix2, N);
         return 1;
     }
 
     fprintf(matr, "Первая матрица (сумма: %d):\n", first);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             fprintf(matr, "%d ", matrix1[i][j]);
         }
         fprintf(matr, "\n");
     }
 
     fprintf(matr, "Вторая матрица (сумма: %d):\n", second);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < m; j++) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
             fprintf(matr, "%d ", matrix2[i][j]);
         }
         fprintf(matr, "\n");
     }
 
     fclose(matr);
+    printf("Матрицы с одинаковой суммой (%d) записаны в output.txt\n", first);
 
-    free_mx(matrix1, m);
-    free_mx(matrix2, m);
+    free_mx(matrix1, N);
+    free_mx(matrix2, N);
 
     clock_t end = clock();
     double time = ((double)(end - start)) / CLOCKS_PER_SEC;
